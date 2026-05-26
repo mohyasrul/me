@@ -1,36 +1,49 @@
-# Algorhytme Portfolio
+# Algorhytme Portfolio v2
 
-Premium static portfolio for Mohammad Yasrul.
+Premium static portfolio for **Mohammad Yasrul** — Product Builder.
 
-## Current Direction
+## What Changed (v2.0)
 
-Dark, refined, editorial, and quietly confident. Designed to feel like a serious builder’s personal site rather than a generic portfolio template.
+- **Build system** — Tailwind CSS via PostCSS (no more CDN, ~16KB output vs 500KB)
+- **SEO** — Meta tags, Open Graph, Twitter Cards, JSON-LD structured data
+- **Consistent dark theme** — All project pages now share the same design system
+- **Hero visual** — Texty Chrome Extension screenshot floating mockup
+- **Case study format** — Problem → Solution → Result for every project
+- **Resume section** — Profile photo, skills, service offerings, CV download
+- **Micro-blog** — Writing section with 3 initial posts
+- **Footer** — Navigation, social links, copyright
+- **Accessibility** — Skip link, ARIA labels, focus styles, WCAG AA contrast
+- **Animations** — Scroll reveal with Intersection Observer
+- **Mobile responsive** — Hamburger menu, fluid typography
+- **Project filtering** — Filter by category (All / Live / Client / Case Study)
+
+## Tech Stack
+
+- HTML5 + Tailwind CSS 3 (PostCSS build)
+- Vanilla JavaScript (no framework)
+- Deployed on GitHub Pages
+
+## Build
+
+```bash
+npm install
+npm run build:css    # Build Tailwind CSS
+```
 
 ## Files
 
-- `index.html` — Main landing (refined dark theme, curated work presentation)
-- `projects/` — Individual project detail pages (should match the same elevated standard)
-- `assets/` — All images and screenshots
+- `index.html` — Main landing
+- `projects/*.html` — Individual project case studies
+- `src/input.css` — Tailwind input with custom base styles
+- `dist/style.css` — Built & minified CSS
+- `assets/` — Screenshots, logo, profile photo
 
-## Key Design Decisions
+## TODO
 
-- Dark charcoal base with excellent typography
-- Generous whitespace and breathing room
-- Work presented as a curated editorial list (not a grid of cards)
-- Heavy use of real screenshots where available
-- Calm, personal, non-salesy voice
+- [ ] Create `assets/cv-mohammad-yasrul.pdf` for the CV download button
+- [ ] Set up custom domain (algorhytme.site) with GitHub Pages
+- [ ] Write full blog posts for the 3 micro-blog entries
 
-## What You Should Still Do
+## Live
 
-1. Add better screenshots for Game_trust and MediSir (currently text-heavy)
-2. Update project detail pages to match the new premium standard of the main page
-3. Add real CV download link
-4. Deploy (Vercel or Netlify drag-and-drop)
-
-## Note on Tone
-
-The copy is intentionally calm and confident. Avoid making it louder or more “hype” — that would break the premium feel.
-
----
-
-If you want a completely different direction (lighter, more colorful, more minimal, more bold, etc.), tell me clearly. We can pivot.
+**https://mohyasrul.github.io/me/**

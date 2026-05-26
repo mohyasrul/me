@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- === SEO Primary === -->
+    <title>Mohammad Yasrul — Product Builder | Algorhytme</title>
+    <meta name="description" content="I build practical web tools and production systems. Chrome Extension published, client projects delivered, complex SaaS built. Based in Indonesia.">
+    <meta name="keywords" content="Mohammad Yasrul, web developer, product builder, Chrome Extension, React, TypeScript, Supabase, Indonesia">
+    <meta name="author" content="Mohammad Yasrul">
+    <link rel="canonical" href="https://algorhytme.site">
+
+    <!-- === Open Graph === -->
+    <meta property="og:title" content="Mohammad Yasrul — Product Builder">
+    <meta property="og:description" content="I build things people actually use. Chrome Extension, marketplace platforms, SaaS.">
+    <meta property="og:image" content="https://algorhytme.site/assets/og-image.png">
+    <meta property="og:url" content="https://algorhytme.site">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+
+    <!-- === Twitter Card === -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mohammad Yasrul — Product Builder">
+    <meta name="twitter:description" content="I build things people actually use. Chrome Extension, marketplace platforms, SaaS.">
+    <meta name="twitter:image" content="https://algorhytme.site/assets/og-image.png">
+
+    <!-- === Favicon === -->
+    <link rel="icon" type="image/jpeg" href="assets/logo-algorhytme.jpg">
+    <link rel="apple-touch-icon" href="assets/logo-algorhytme.jpg">
+
+    <!-- === Structured Data (JSON-LD) === -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Mohammad Yasrul",
+      "url": "https://algorhytme.site",
+      "jobTitle": "Product Builder",
+      "description": "I build practical web tools and production systems.",
+      "sameAs": [
+        "https://github.com/mohyasrul",
+        "https://instagram.com/myas.aa"
+      ],
+      "knowsAbout": ["Web Development", "Chrome Extensions", "React", "TypeScript", "Supabase", "Next.js"],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Indonesia"
+      }
+    }
+    </script>
+
+    <!-- === Font Preloading === -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+
+    <!-- === Stylesheet (built Tailwind) === -->
+    <link rel="stylesheet" href="dist/style.css">
+
+    <style>
+        /* Minimal fallback if CSS hasn't loaded yet */
+        body { background: #080808; color: #d4d4d4; font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-canvas text-text-body font-body">
+
+    <!-- ===== Skip to Content (Accessibility) ===== -->
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <!-- ==================== NAVIGATION ==================== -->
+    <nav id="nav" class="nav fixed top-0 left-0 right-0 z-50 border-b border-transparent bg-canvas/95" role="navigation" aria-label="Main navigation">
+        <div class="max-w-[1280px] mx-auto px-4 sm:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-x-3 group" aria-label="Algorhytme home">
+                    <img src="assets/logo-algorhytme.jpg" 
+                         alt="Algorhytme logo" 
+                         class="w-9 h-9 rounded-lg object-cover"
+                         width="36" height="36"
+                         loading="eager">
+                    <div>
+                        <div class="font-semibold tracking-[-0.5px] text-text-primary">Algorhytme</div>
+                        <div class="text-[10px] text-text-subtle -mt-0.5">Mohammad Yasrul</div>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <div class="hidden md:flex items-center gap-x-10 text-sm">
+                    <a href="#work" class="text-text-muted hover:text-text-primary transition-colors">Work</a>
+                    <a href="#resume" class="text-text-muted hover:text-text-primary transition-colors">Resume</a>
+                    <a href="#blog" class="text-text-muted hover:text-text-primary transition-colors">Writing</a>
+                    <a href="#contact" class="text-text-muted hover:text-text-primary transition-colors">Contact</a>
+                </div>
+
+                <!-- CTA + Mobile Menu -->
+                <div class="flex items-center gap-x-4">
+                    <a href="https://wa.me/6281809993513" target="_blank" rel="noopener"
+                       class="refined-button hidden sm:inline-flex px-5 py-2.5 text-sm font-medium border border-white/20 hover:bg-white hover:text-black rounded-button transition-all">
+                        Start a project
+                    </a>
+                    <!-- Mobile hamburger -->
+                    <button id="mobile-menu-btn" 
+                            class="md:hidden p-2 text-text-muted hover:text-text-primary" 
+                            aria-label="Open navigation menu" 
+                            aria-expanded="false">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 12h18M3 6h18M3 18h18"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu (hidden by default) -->
+            <div id="mobile-menu" class="md:hidden hidden pb-6 border-t border-border-subtle mt-2 pt-4">
+                <div class="flex flex-col gap-y-3 text-sm">
+                    <a href="#work" class="text-text-muted hover:text-text-primary py-2 transition-colors mobile-nav-link">Work</a>
+                    <a href="#resume" class="text-text-muted hover:text-text-primary py-2 transition-colors mobile-nav-link">Resume</a>
+                    <a href="#blog" class="text-text-muted hover:text-text-primary py-2 transition-colors mobile-nav-link">Writing</a>
+                    <a href="#contact" class="text-text-muted hover:text-text-primary py-2 transition-colors mobile-nav-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main id="main">
+
+        <!-- ===== HERO ===== -->
+        <section class="max-w-[1280px] mx-auto px-4 sm:px-8 pt-28 pb-16 md:pt-36 md:pb-20" aria-label="Hero">
+            <div class="grid md:grid-cols-12 gap-x-8 gap-y-12 items-center">
+                
+                <!-- Left: Text -->
+                <div class="md:col-span-7">
+                    <!-- Badge -->
+                    <div class="reveal inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 text-xs tracking-[1px] text-text-subtle mb-8">
+                        <span class="w-1.5 h-1.5 rounded-full bg-accent-emerald"></span>
+                        INFORMATICS &middot; PRODUCT BUILDER
+                    </div>
+
+                    <!-- Headline -->
+                    <h1 class="reveal reveal-delay-1 heading text-hero font-semibold text-text-primary">
+                        I build things<br class="hidden sm:block">people actually<br class="hidden sm:block">use.
+                    </h1>
+
+                    <!-- Subheadline -->
+                    <p class="reveal reveal-delay-2 mt-6 text-lg sm:text-xl text-text-muted max-w-lg leading-relaxed">
+                        Solo builder. I ship practical tools — from Chrome Extensions to full marketplace platforms.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="reveal reveal-delay-3 mt-8 flex flex-wrap items-center gap-3">
+                        <a href="#work" 
+                           class="refined-button inline-flex items-center gap-2 bg-cta-bg text-cta-text px-7 py-3.5 rounded-button font-medium text-sm group">
+                            <span>See my work</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="transition-transform group-hover:translate-y-0.5">
+                                <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/6281809993513" target="_blank" rel="noopener"
+                           class="refined-button inline-flex items-center gap-2 px-7 py-3.5 rounded-button font-medium text-sm border border-white/20 hover:border-white/30 hover:bg-surface text-text-primary">
+                            <span>Chat di WhatsApp</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- Trust bar -->
+                    <div class="reveal reveal-delay-4 mt-14 flex flex-wrap items-center gap-x-8 gap-y-2 text-xs tracking-widest text-text-subtle">
+                        <div class="flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-accent-emerald"></span> Chrome Web Store
+                        </div>
+                        <div>4 PROJECTS SHIPPED</div>
+                        <div>BASED IN INDONESIA</div>
+                        <div>2024 — 2026</div>
+                    </div>
+                </div>
+
+                <!-- Right: Visual (Texty Chrome Extension mockup) -->
+                <div class="md:col-span-5 reveal reveal-delay-2">
+                    <div class="relative">
+                        <!-- Decorative glow -->
+                        <div class="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent rounded-2xl blur-3xl"></div>
+                        <!-- Screenshot -->
+                        <div class="relative rounded-2xl border border-border-subtle overflow-hidden bg-surface shadow-2xl">
+                            <img src="assets/1.png" 
+                                 alt="Texty Chrome Extension — text expander popup showing shortcuts" 
+                                 class="project-image w-full"
+                                 width="600" height="400"
+                                 loading="eager"
+                                 decoding="async">
+                            <!-- Chrome browser chrome mock -->
+                            <div class="flex items-center gap-1.5 px-3 py-2 border-b border-border-subtle bg-canvas">
+                                <span class="w-2.5 h-2.5 rounded-full bg-accent-rose/70"></span>
+                                <span class="w-2.5 h-2.5 rounded-full bg-accent-amber/70"></span>
+                                <span class="w-2.5 h-2.5 rounded-full bg-accent-emerald/70"></span>
+                            </div>
+                            <img src="assets/2.png" 
+                                 alt="Texty Chrome Extension — main interface" 
+                                 class="project-image w-full"
+                                 width="600" height="300"
+                                 loading="lazy"
+                                 decoding="async">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="elegant-divider max-w-[1280px] mx-auto px-4 sm:px-8"></div>
+
+        <!-- ===== ABOUT ===== -->
+        <section class="max-w-[1280px] mx-auto px-4 sm:px-8 pt-section pb-14" aria-labelledby="about-heading">
+            <div class="grid grid-cols-12 gap-x-8">
+                <div class="col-span-12 md:col-span-4">
+                    <div class="section-label text-text-muted mb-4">ABOUT</div>
+                </div>
+                <div class="col-span-12 md:col-span-8">
+                    <div class="reveal max-w-2xl text-[17px] text-text-muted body-text space-y-5">
+                        <p>
+                            I&rsquo;m a final-year Informatics student who treats building as a craft. 
+                            I&rsquo;ve shipped a <strong class="text-text-primary font-medium">published Chrome extension</strong>, 
+                            delivered <strong class="text-text-primary font-medium">production software to paying clients</strong>, 
+                            and built <strong class="text-text-primary font-medium">complex internal systems</strong>.
+                        </p>
+                        <p>
+                            I move fast with modern tools and AI assistance, but I care deeply about 
+                            clarity, maintainability, and real utility — not just writing code that looks good on GitHub.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SELECTED WORK ===== -->
+        <section id="work" class="max-w-[1280px] mx-auto px-4 sm:px-8 pt-10 pb-section" aria-labelledby="work-heading">
+            <div class="flex items-end justify-between mb-12">
+                <div>
+                    <div class="section-label text-text-muted mb-3">SELECTED WORK</div>
+                    <h2 id="work-heading" class="heading text-h2 text-text-primary">Things I&rsquo;ve shipped</h2>
+                </div>
+                <div class="hidden md:block">
+                    <!-- Filter tabs -->
+                    <div class="flex items-center gap-x-1 text-sm" role="tablist" aria-label="Filter projects">
+                        <button class="filter-tab px-3 py-1.5 rounded-lg bg-surface text-text-primary text-xs font-medium" role="tab" aria-selected="true" data-filter="all">All</button>
+                        <button class="filter-tab px-3 py-1.5 rounded-lg text-text-muted hover:text-text-primary text-xs font-medium" role="tab" aria-selected="false" data-filter="live">Live</button>
+                        <button class="filter-tab px-3 py-1.5 rounded-lg text-text-muted hover:text-text-primary text-xs font-medium" role="tab" aria-selected="false" data-filter="client">Client</button>
+                        <button class="filter-tab px-3 py-1.5 rounded-lg text-text-muted hover:text-text-primary text-xs font-medium" role="tab" aria-selected="false" data-filter="casestudy">Case Study</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Work Items -->
+            <div class="space-y-5" id="work-list">
+
+                <!-- 1. Texty -->
+                <article class="work-item reveal group block bg-surface border border-border-subtle rounded-card p-6 sm:p-10 hover:border-border-hover" data-category="live">
+                    <a href="projects/texty.html" class="block">
+                        <div class="grid md:grid-cols-12 gap-x-8 gap-y-8 items-center">
+                            <div class="md:col-span-7">
+                                <div class="flex items-center gap-x-3 mb-4">
+                                    <h3 class="heading text-h3 text-text-primary">Texty</h3>
+                                    <span class="px-3 py-0.5 text-[10px] font-semibold tracking-widest bg-accent-emerald/10 text-accent-emerald rounded-full">LIVE</span>
+                                </div>
+                                <p class="text-text-muted text-base sm:text-lg pr-4 body-text">
+                                    A pragmatic text expander Chrome extension for freelancers, support teams, and power users. Published on the Chrome Web Store with a full marketing site and license system.
+                                </p>
+                                <div class="mt-6 flex flex-wrap items-center gap-2 text-xs">
+                                    <span class="px-3 py-1 bg-white/5 rounded-2xl text-text-muted">Chrome Extension</span>
+                                    <span class="px-3 py-1 bg-white/5 rounded-2xl text-text-muted">Next.js + Supabase</span>
+                                    <span class="px-3 py-1 bg-white/5 rounded-2xl text-text-muted">LemonSqueezy</span>
+                                </div>
+                            </div>
+                            <div class="md:col-span-5">
+                                <div class="overflow-hidden rounded-2xl border border-border-subtle">
+                                    <img src="assets/1.png" 
+                                         alt="Texty Chrome Extension interface" 
+                                         class="project-image w-full"
+                                         width="600" height="400"
+                                         loading="lazy" decoding="async">
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- 2. Game_trust -->
+                <article class="work-item reveal group block bg-surface border border-border-subtle rounded-card p-6 sm:p-10 hover:border-border-hover" data-category="client">
+                    <a href="projects/game-trust.html" class="block">
+                        <div class="grid md:grid-cols-12 gap-x-8 gap-y-8 items-center">
+                            <div class="md:col-span-7">
+                                <div class="flex items-center gap-x-3 mb-4">
+                                    <h3 class="heading text-h3 text-text-primary">Game_trust</h3>
+                                    <span class="px-3 py-0.5 text-[10px] font-semibold tracking-widest bg-accent-amber/10 text-accent-amber rounded-full">CLIENT</span>
+                                </div>
+                                <p class="text-text-muted text-base sm:text-lg pr-4 body-text">
+                                    A complete secondary marketplace platform for in-game assets. Features offer system, order management, admin tools, financial reporting, and multi-role access. Delivered to a paying client.
+                                </p>
+                                <div class="mt-6 flex flex-wrap items-center gap-2 text-xs">
+                                    <span class="px-3 py-1 bg-white/5 rounded-2xl text-text-muted">Next.js 15</span>
+                                    <span class="px-3 py-1 bg-white/5 rounded-2xl text-text-muted">Supabase</span>
+                                    <span class="px-3 py-1 bg-white/5 rounded-2xl text-text-muted">Production</span>
+                                </div>
+                            </div>
+                            <div class="md:col-span-5">
+                                <div class="overflow-hidden rounded-2xl border border-border-subtle">
+                                    <img src="assets/gametrust-screenshot.png" 
+                                         alt="Game_trust admin dashboard" 
+                                         class="project-image w-full"
+                                         width="600" height="400"
+                                         loading="lazy" decoding="async">
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- 3. MediSir -->
+                <article class="work-item reveal group block bg-surface border border-border-subtle rounded-card p-6 sm:p-10 hover:border-border-hover" data-category="casestudy">
+                    <a href="projects/medisir.html" class="block">
+                        <div class="grid md:grid-cols-12 gap-x-8 gap-y-8 items-center">
+                            <div class="md:col-span-7">
+                                <div class="flex items-center gap-x-3 mb-4">
+                                    <h3 class="heading text-h3 text-text-primary">MediSir POS</h3>
+                                    <span class="px-3 py-0.5 text-[10px] font-semibold tracking-widest bg-white/10 text-text-muted rounded-full">CASE STUDY</span>
+                                </div>
+                                <p class="text-text-muted text-base sm:text-lg pr-4 body-text">
+                                    One of the most technically complete systems I&rsquo;ve built — a full pharmacy management SaaS with POS, multi-cashier, realtime inventory, prescriptions, and WhatsApp receipts. Advanced MVP paused due to healthcare regulations.
+                                </p>
+                                <div class="mt-6 flex flex-wrap items-center gap-2 text-xs">
+                                    <span class="px-3 py-1 bg-white/5 rounded-2xl text-text-muted">React + TS</span>
+                                    <span class="px-3 py-1 bg-white/5 rounded-2xl text-text-muted">Supabase Realtime</span>
+                                    <span class="px-3 py-1 bg-white/5 rounded-2xl text-text-muted">Multi-tenant</span>
+                                </div>
+                            </div>
+                            <div class="md:col-span-5">
+                                <div class="overflow-hidden rounded-2xl border border-border-subtle">
+                                    <img src="assets/medisir-screenshot.png" 
+                                         alt="MediSir POS pharmacy management dashboard" 
+                                         class="project-image w-full"
+                                         width="600" height="400"
+                                         loading="lazy" decoding="async">
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- 4. Jokskuy -->
+                <article class="work-item reveal group block bg-surface border border-border-subtle rounded-card p-6 sm:p-10 hover:border-border-hover" data-category="client">
+                    <a href="projects/jokskuy.html" class="block">
+                        <div class="grid md:grid-cols-12 gap-x-8 gap-y-8 items-center">
+                            <div class="md:col-span-7">
+                                <div class="flex items-center gap-x-3 mb-4">
+                                    <h3 class="heading text-h3 text-text-primary">Jokskuy</h3>
+                                    <span class="px-3 py-0.5 text-[10px] font-semibold tracking-widest bg-accent-blue/10 text-accent-blue rounded-full">FULL SYSTEM</span>
+                                </div>
+                                <p class="text-text-muted text-base sm:text-lg pr-4 body-text">
+                                    Complete client and order management platform for an educational service operation. Real-time chat, payment proof verification, admin workflows, custom requests, and delivery tracking.
+                                </p>
+                                <div class="mt-6 flex flex-wrap items-center gap-2 text-xs">
+                                    <span class="px-3 py-1 bg-white/5 rounded-2xl text-text-muted">React 19</span>
+                                    <span class="px-3 py-1 bg-white/5 rounded-2xl text-text-muted">Supabase</span>
+                                    <span class="px-3 py-1 bg-white/5 rounded-2xl text-text-muted">TanStack Query</span>
+                                </div>
+                            </div>
+                            <div class="md:col-span-5">
+                                <div class="overflow-hidden rounded-2xl border border-border-subtle">
+                                    <img src="assets/jokskuy-screenshot.png" 
+                                         alt="Jokskuy order management platform" 
+                                         class="project-image w-full"
+                                         width="600" height="400"
+                                         loading="lazy" decoding="async">
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <div class="elegant-divider max-w-[1280px] mx-auto px-4 sm:px-8"></div>
+
+        <!-- ===== RESUME / CV ===== -->
+        <section id="resume" class="max-w-[1280px] mx-auto px-4 sm:px-8 py-section" aria-labelledby="resume-heading">
+            <div class="grid grid-cols-12 gap-x-8">
+                <div class="col-span-12 md:col-span-4">
+                    <div class="section-label text-text-muted mb-4">RESUME</div>
+                </div>
+                <div class="col-span-12 md:col-span-8">
+                    <div class="reveal max-w-2xl">
+                        <!-- Profile photo + intro -->
+                        <div class="flex items-start gap-x-6 mb-8">
+                            <img src="assets/foto-profile.jpg" 
+                                 alt="Mohammad Yasrul profile photo" 
+                                 class="w-20 h-20 rounded-2xl object-cover border border-border-subtle flex-shrink-0"
+                                 width="80" height="80"
+                                 loading="lazy">
+                            <div>
+                                <h2 id="resume-heading" class="heading text-h2 text-text-primary mb-2">Mohammad Yasrul</h2>
+                                <p class="text-text-muted text-sm">Informatics Student &middot; Product Builder &middot; Indonesia</p>
+                                <a href="assets/cv-mohammad-yasrul.pdf" download 
+                                   class="refined-button inline-flex items-center gap-2 mt-4 px-5 py-2.5 text-sm font-medium bg-cta-bg text-cta-text rounded-button hover:bg-cta-hover group">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                        <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                                    </svg>
+                                    Download CV
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Skills -->
+                        <div class="mb-8">
+                            <h3 class="text-xs font-semibold tracking-[0.15em] uppercase text-text-muted mb-4">Core Skills</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1.5 text-xs bg-surface border border-border-subtle rounded-lg text-text-muted">TypeScript</span>
+                                <span class="px-3 py-1.5 text-xs bg-surface border border-border-subtle rounded-lg text-text-muted">React / Next.js</span>
+                                <span class="px-3 py-1.5 text-xs bg-surface border border-border-subtle rounded-lg text-text-muted">Supabase / PostgreSQL</span>
+                                <span class="px-3 py-1.5 text-xs bg-surface border border-border-subtle rounded-lg text-text-muted">Chrome Extensions (MV3)</span>
+                                <span class="px-3 py-1.5 text-xs bg-surface border border-border-subtle rounded-lg text-text-muted">Tailwind CSS</span>
+                                <span class="px-3 py-1.5 text-xs bg-surface border border-border-subtle rounded-lg text-text-muted">Node.js</span>
+                                <span class="px-3 py-1.5 text-xs bg-surface border border-border-subtle rounded-lg text-text-muted">Laravel / PHP</span>
+                                <span class="px-3 py-1.5 text-xs bg-surface border border-border-subtle rounded-lg text-text-muted">Git / GitHub</span>
+                            </div>
+                        </div>
+
+                        <!-- What I can do for you -->
+                        <div>
+                            <h3 class="text-xs font-semibold tracking-[0.15em] uppercase text-text-muted mb-4">What I Can Build For You</h3>
+                            <div class="grid sm:grid-cols-2 gap-3">
+                                <div class="p-4 bg-surface border border-border-subtle rounded-xl">
+                                    <div class="font-medium text-text-primary text-sm mb-1">Web Applications</div>
+                                    <div class="text-text-muted text-xs body-text">Full-stack apps with React, Next.js, and Supabase. From marketplaces to internal tools.</div>
+                                </div>
+                                <div class="p-4 bg-surface border border-border-subtle rounded-xl">
+                                    <div class="font-medium text-text-primary text-sm mb-1">Chrome Extensions</div>
+                                    <div class="text-text-muted text-xs body-text">Published on Chrome Web Store. Manifest V3, TypeScript, with licensing & payments.</div>
+                                </div>
+                                <div class="p-4 bg-surface border border-border-subtle rounded-xl">
+                                    <div class="font-medium text-text-primary text-sm mb-1">SaaS & Multi-tenant</div>
+                                    <div class="text-text-muted text-xs body-text">Multi-role access, realtime sync, financial reporting, admin dashboards.</div>
+                                </div>
+                                <div class="p-4 bg-surface border border-border-subtle rounded-xl">
+                                    <div class="font-medium text-text-primary text-sm mb-1">Landing Pages & Websites</div>
+                                    <div class="text-text-muted text-xs body-text">Performance-optimized, SEO-ready, responsive. Built for conversion.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="elegant-divider max-w-[1280px] mx-auto px-4 sm:px-8"></div>
+
+        <!-- ===== APPROACH ===== -->
+        <section class="max-w-[1280px] mx-auto px-4 sm:px-8 py-section" aria-labelledby="approach-heading">
+            <div class="grid grid-cols-12 gap-x-8">
+                <div class="col-span-12 md:col-span-4">
+                    <div class="section-label text-text-muted">APPROACH</div>
+                </div>
+                <div class="col-span-12 md:col-span-8">
+                    <div class="reveal max-w-2xl space-y-10 text-lg text-text-muted body-text">
+                        <div>
+                            I optimize for <strong class="text-text-primary font-medium">speed with taste</strong>. Modern tooling and AI let me move extremely fast, but I refuse to ship things that feel half-baked.
+                        </div>
+                        <div>
+                            I&rsquo;m honest about scope, trade-offs, and what&rsquo;s actually realistic. I&rsquo;d rather lose a project than overpromise and underdeliver.
+                        </div>
+                        <div>
+                            I build for the long term. Clean architecture and clear documentation matter — even on small projects.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== MICRO-BLOG ===== -->
+        <section id="blog" class="max-w-[1280px] mx-auto px-4 sm:px-8 pt-10 pb-section border-t border-border-subtle" aria-labelledby="blog-heading">
+            <div class="flex items-end justify-between mb-12">
+                <div>
+                    <div class="section-label text-text-muted mb-3">WRITING</div>
+                    <h2 id="blog-heading" class="heading text-h2 text-text-primary">Thoughts on building</h2>
+                </div>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Post 1 -->
+                <article class="reveal blog-card p-6 bg-canvas border border-border-subtle rounded-card">
+                    <time class="text-xs text-text-subtle tracking-wider">May 2026</time>
+                    <h3 class="mt-3 text-text-primary font-semibold leading-snug">
+                        Why I chose Supabase over Firebase for client projects
+                    </h3>
+                    <p class="mt-2 text-sm text-text-muted body-text">
+                        PostgreSQL, RLS, and realtime features make it a better fit for production systems that need relational data integrity.
+                    </p>
+                    <div class="mt-4 flex items-center gap-2 text-xs">
+                        <span class="px-2 py-0.5 bg-white/5 rounded-lg text-text-muted">#supabase</span>
+                        <span class="px-2 py-0.5 bg-white/5 rounded-lg text-text-muted">#architecture</span>
+                    </div>
+                </article>
+
+                <!-- Post 2 -->
+                <article class="reveal reveal-delay-1 blog-card p-6 bg-canvas border border-border-subtle rounded-card">
+                    <time class="text-xs text-text-subtle tracking-wider">Apr 2026</time>
+                    <h3 class="mt-3 text-text-primary font-semibold leading-snug">
+                        Building a Chrome Extension in 2026: What I learned from Texty
+                    </h3>
+                    <p class="mt-2 text-sm text-text-muted body-text">
+                        Manifest V3 constraints, Plasmo framework, and the reality of Chrome Web Store review process.
+                    </p>
+                    <div class="mt-4 flex items-center gap-2 text-xs">
+                        <span class="px-2 py-0.5 bg-white/5 rounded-lg text-text-muted">#chrome-extension</span>
+                        <span class="px-2 py-0.5 bg-white/5 rounded-lg text-text-muted">#plasmo</span>
+                    </div>
+                </article>
+
+                <!-- Post 3 -->
+                <article class="reveal reveal-delay-2 blog-card p-6 bg-canvas border border-border-subtle rounded-card">
+                    <time class="text-xs text-text-subtle tracking-wider">Mar 2026</time>
+                    <h3 class="mt-3 text-text-primary font-semibold leading-snug">
+                        When to pause a product: Lessons from MediSir
+                    </h3>
+                    <p class="mt-2 text-sm text-text-muted body-text">
+                        Building complex software is one thing. Navigating industry regulations is another. Knowing when to stop is a skill.
+                    </p>
+                    <div class="mt-4 flex items-center gap-2 text-xs">
+                        <span class="px-2 py-0.5 bg-white/5 rounded-lg text-text-muted">#product</span>
+                        <span class="px-2 py-0.5 bg-white/5 rounded-lg text-text-muted">#startup</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ===== CONTACT ===== -->
+        <section id="contact" class="border-t border-border-subtle bg-canvas-soft">
+            <div class="max-w-[1280px] mx-auto px-4 sm:px-8 py-section">
+                <div class="reveal max-w-xl">
+                    <div class="section-label text-text-muted mb-4">LET&rsquo;S WORK</div>
+                    <h2 class="heading text-h2 text-text-primary">Got a product idea? Let&rsquo;s talk.</h2>
+                    <p class="mt-4 text-text-muted body-text">
+                        I&rsquo;m available for freelance projects and collaborations. Usually respond within a day.
+                    </p>
+
+                    <div class="mt-10 space-y-6">
+                        <!-- WhatsApp (Primary) -->
+                        <a href="https://wa.me/6281809993513" target="_blank" rel="noopener"
+                           class="refined-button flex items-center gap-x-4 p-4 bg-surface border border-border-subtle rounded-card hover:border-border-hover group">
+                            <div class="w-10 h-10 bg-accent-emerald/15 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="#34d399">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                                </svg>
+                            </div>
+                            <div class="flex-1 text-left">
+                                <div class="text-sm font-medium text-text-primary group-hover:text-text-primary">Chat on WhatsApp</div>
+                                <div class="text-xs text-text-muted mt-0.5">+62 818-0999-3513 &middot; Fastest response</div>
+                            </div>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-text-muted group-hover:text-text-primary transition-colors">
+                                <path d="M7 17L17 7M7 7h10v10"/>
+                            </svg>
+                        </a>
+
+                        <!-- Email (Secondary) -->
+                        <a href="mailto:admin@algorhytme.site"
+                           class="refined-button flex items-center gap-x-4 p-4 bg-surface border border-border-subtle rounded-card hover:border-border-hover group">
+                            <div class="w-10 h-10 bg-accent-blue/15 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2">
+                                    <rect x="2" y="4" width="20" height="16" rx="2"/>
+                                    <path d="M22 4L12 13L2 4"/>
+                                </svg>
+                            </div>
+                            <div class="flex-1 text-left">
+                                <div class="text-sm font-medium text-text-primary">Email</div>
+                                <div class="text-xs text-text-muted mt-0.5">admin@algorhytme.site</div>
+                            </div>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-text-muted group-hover:text-text-primary transition-colors">
+                                <path d="M7 17L17 7M7 7h10v10"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="border-t border-border-subtle bg-canvas" role="contentinfo">
+        <div class="max-w-[1280px] mx-auto px-4 sm:px-8 py-12">
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-y-6">
+                <!-- Brand -->
+                <div class="flex items-center gap-x-3">
+                    <img src="assets/logo-algorhytme.jpg" 
+                         alt="" 
+                         class="w-8 h-8 rounded-lg object-cover opacity-60"
+                         width="32" height="32"
+                         loading="lazy"
+                         aria-hidden="true">
+                    <div>
+                        <div class="text-sm font-medium text-text-muted">Algorhytme</div>
+                        <div class="text-xs text-text-subtle">Built by Mohammad Yasrul</div>
+                    </div>
+                </div>
+
+                <!-- Links -->
+                <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm">
+                    <a href="#work" class="text-text-muted hover:text-text-primary transition-colors">Work</a>
+                    <a href="#resume" class="text-text-muted hover:text-text-primary transition-colors">Resume</a>
+                    <a href="#blog" class="text-text-muted hover:text-text-primary transition-colors">Writing</a>
+                    <a href="https://github.com/mohyasrul" target="_blank" rel="noopener" class="text-text-muted hover:text-text-primary transition-colors">GitHub</a>
+                    <a href="https://instagram.com/myas.aa" target="_blank" rel="noopener" class="text-text-muted hover:text-text-primary transition-colors">Instagram</a>
+                </div>
+
+                <!-- Copyright -->
+                <div class="text-xs text-text-subtle">
+                    &copy; 2024–2026 Algorhytme
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script>
+        // --- NAVBAR SCROLL ---
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 60);
+        });
+
+        // --- MOBILE MENU ---
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = mobileMenu.querySelectorAll('.mobile-nav-link');
+
+        menuBtn.addEventListener('click', () => {
+            const isOpen = !mobileMenu.classList.contains('hidden');
+            mobileMenu.classList.toggle('hidden', isOpen);
+            menuBtn.setAttribute('aria-expanded', !isOpen);
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuBtn.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // --- SCROLL REVEAL ---
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // --- PROJECT FILTER ---
+        const filterTabs = document.querySelectorAll('.filter-tab');
+        const workItems = document.querySelectorAll('#work-list > article');
+
+        filterTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const filter = tab.dataset.filter;
+
+                // Update active tab
+                filterTabs.forEach(t => {
+                    t.setAttribute('aria-selected', 'false');
+                    t.classList.remove('bg-surface', 'text-text-primary');
+                    t.classList.add('text-text-muted');
+                });
+                tab.setAttribute('aria-selected', 'true');
+                tab.classList.add('bg-surface', 'text-text-primary');
+                tab.classList.remove('text-text-muted');
+
+                // Filter items
+                workItems.forEach(item => {
+                    if (filter === 'all') {
+                        item.style.display = '';
+                    } else {
+                        item.style.display = item.dataset.category === filter ? '' : 'none';
+                    }
+                });
+            });
+        });
+
+        // Performance mark
+        console.log('%c[Algorhytme] v2 loaded', 'color:#a3a3a3; font-size:10px;');
+    </script>
+</body>
+</html>

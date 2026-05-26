@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Texty — Algorhytme</title>
+    <meta name="description" content="Texty: A pragmatic text expander Chrome Extension. Published on Chrome Web Store. Built with Plasmo, TypeScript, Next.js, Supabase, LemonSqueezy.">
+
+    <meta property="og:title" content="Texty — Chrome Extension by Mohammad Yasrul">
+    <meta property="og:description" content="A pragmatic text expander for freelancers, support teams, and power users. Published on the Chrome Web Store.">
+    <meta property="og:image" content="../assets/1.png">
+    <meta property="og:type" content="article">
+
+    <link rel="icon" type="image/jpeg" href="../assets/logo-algorhytme.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../dist/style.css">
+    <style>body{background:#080808;color:#d4d4d4;font-family:'Inter',sans-serif;}</style>
+</head>
+<body class="bg-canvas text-text-body font-body">
+
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <main id="main">
+        <div class="max-w-[960px] mx-auto px-4 sm:px-8 py-12 sm:py-16">
+
+            <!-- Back -->
+            <a href="../index.html" class="inline-flex items-center gap-2 text-sm text-text-muted hover:text-text-primary transition-colors group mb-12">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="transition-transform group-hover:-translate-x-0.5">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                <span>Back to work</span>
+            </a>
+
+            <!-- Header -->
+            <div class="reveal">
+                <div class="flex flex-wrap items-center gap-3 mb-4">
+                    <h1 class="heading text-h1 text-text-primary">Texty</h1>
+                    <span class="px-3 py-0.5 text-[10px] font-semibold tracking-widest bg-accent-emerald/10 text-accent-emerald rounded-full">LIVE</span>
+                </div>
+                <p class="text-xl sm:text-2xl text-text-muted max-w-xl">
+                    The pragmatic text expander for people who write the same things every day.
+                </p>
+            </div>
+
+            <!-- CTA Bar -->
+            <div class="reveal reveal-delay-1 flex flex-wrap gap-3 mt-8">
+                <a href="https://chromewebstore.google.com/detail/texty/linmccoaknalimjbkabijlnhiahhgejp" target="_blank" rel="noopener"
+                   class="refined-button inline-flex items-center gap-2 px-6 py-3 bg-cta-bg text-cta-text rounded-button text-sm font-medium hover:bg-cta-hover">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4" fill="#080808"/><path d="M12 2v8M12 14v8M2 12h8M14 12h8" stroke="#080808" stroke-width="1.5"/></svg>
+                    <span>Chrome Web Store</span>
+                </a>
+                <a href="https://texty.algorhytme.site" target="_blank" rel="noopener"
+                   class="refined-button inline-flex items-center gap-2 px-6 py-3 border border-white/20 hover:bg-surface rounded-button text-sm font-medium text-text-primary">
+                    <span>Marketing Site</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+                </a>
+            </div>
+
+            <!-- Screenshot Showcase -->
+            <div class="reveal reveal-delay-2 mt-12 grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="rounded-2xl overflow-hidden border border-border-subtle bg-surface">
+                    <img src="../assets/1.png" alt="Texty extension popup with text shortcuts" class="w-full" width="700" height="467" loading="lazy" decoding="async">
+                </div>
+                <div class="rounded-2xl overflow-hidden border border-border-subtle bg-surface">
+                    <img src="../assets/2.png" alt="Texty main extension interface" class="w-full" width="700" height="467" loading="lazy" decoding="async">
+                </div>
+            </div>
+
+            <!-- Case Study: Problem → Process → Result -->
+            <div class="reveal mt-14 max-w-3xl">
+
+                <!-- Problem -->
+                <section class="mb-10">
+                    <h2 class="text-xs font-semibold tracking-[0.15em] uppercase text-text-muted mb-4">The Problem</h2>
+                    <div class="text-text-muted body-text space-y-3">
+                        <p>
+                            Freelancers, customer support teams, and power users spend hours every week typing the same messages 
+                            over and over — price quotes, FAQ answers, intro messages, payment instructions.
+                        </p>
+                        <p>
+                            Existing solutions were either too complex (full automation platforms), too limited (basic OS-level shortcuts), 
+                            or too expensive for solo operators. There was no <strong class="text-text-primary font-medium">simple, fast text expander</strong> 
+                            that just works in the browser.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Process -->
+                <section class="mb-10">
+                    <h2 class="text-xs font-semibold tracking-[0.15em] uppercase text-text-muted mb-4">What I Built</h2>
+                    <div class="text-text-muted body-text space-y-3">
+                        <p>
+                            Texty is a Chrome Extension that lets users define text shortcuts. Type <code class="font-mono text-sm bg-surface px-1.5 py-0.5 rounded text-text-primary">;;price</code> 
+                            in any text field and it instantly expands into a full, professional reply.
+                        </p>
+                    </div>
+                    <ul class="mt-4 space-y-2.5 text-text-muted text-sm">
+                        <li class="flex items-start gap-2">
+                            <span class="text-accent-emerald mt-1">&#10003;</span>
+                            <span>Full Manifest V3 extension with content scripts + service worker architecture</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-accent-emerald mt-1">&#10003;</span>
+                            <span>Inline search with fuzzy matching, custom prefixes (<code class="font-mono text-xs bg-surface px-1 rounded">;;</code>), and undo support</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-accent-emerald mt-1">&#10003;</span>
+                            <span>Complete marketing site with license key system (LemonSqueezy + Supabase)</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-accent-emerald mt-1">&#10003;</span>
+                            <span>Built with Plasmo framework for faster development and better DX</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-accent-emerald mt-1">&#10003;</span>
+                            <span>Import/export shortcuts, variable placeholders for dynamic content</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Result -->
+                <section>
+                    <h2 class="text-xs font-semibold tracking-[0.15em] uppercase text-text-muted mb-4">The Result</h2>
+                    <div class="text-text-muted body-text space-y-3">
+                        <p>
+                            Texty is <strong class="text-text-primary font-medium">published and live</strong> on the Chrome Web Store. 
+                            It&rsquo;s the only project in the portfolio that&rsquo;s a real, packaged product anyone can install right now.
+                        </p>
+                        <p>
+                            This project proves I can ship end-to-end: browser extension development, payment integration, 
+                            marketing site, and license management — all built and deployed solo.
+                        </p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Tech Stack -->
+            <div class="reveal mt-12 pt-10 border-t border-border-subtle">
+                <h2 class="text-xs font-semibold tracking-[0.15em] uppercase text-text-muted mb-4">Stack</h2>
+                <div class="flex flex-wrap gap-2 text-sm">
+                    <span class="px-3 py-1.5 bg-surface border border-border-subtle rounded-lg text-text-muted">Plasmo</span>
+                    <span class="px-3 py-1.5 bg-surface border border-border-subtle rounded-lg text-text-muted">TypeScript</span>
+                    <span class="px-3 py-1.5 bg-surface border border-border-subtle rounded-lg text-text-muted">Next.js</span>
+                    <span class="px-3 py-1.5 bg-surface border border-border-subtle rounded-lg text-text-muted">Supabase</span>
+                    <span class="px-3 py-1.5 bg-surface border border-border-subtle rounded-lg text-text-muted">LemonSqueezy</span>
+                    <span class="px-3 py-1.5 bg-surface border border-border-subtle rounded-lg text-text-muted">Chrome Extension MV3</span>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="reveal mt-12 pt-10 border-t border-border-subtle flex flex-wrap items-center justify-between gap-4" aria-label="Project navigation">
+                <span class="text-sm text-text-subtle">&larr; Previous</span>
+                <a href="game-trust.html" class="inline-flex items-center gap-2 text-sm text-text-muted hover:text-text-primary transition-colors group">
+                    Next: Game_trust
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="transition-transform group-hover:translate-x-0.5">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </nav>
+
+            <!-- CTA Footer -->
+            <div class="reveal mt-10 p-8 bg-surface border border-border-subtle rounded-card text-center">
+                <p class="text-text-muted text-sm mb-4">Tertarik dengan Chrome Extension atau tools serupa?</p>
+                <a href="https://wa.me/6281809993513" target="_blank" rel="noopener"
+                   class="refined-button inline-flex items-center gap-2 px-6 py-3 bg-cta-bg text-cta-text rounded-button text-sm font-medium">
+                    Discuss your project on WhatsApp
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

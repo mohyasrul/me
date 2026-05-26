@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Game_trust — Algorhytme</title>
+    <meta name="description" content="Game_trust: A complete secondary marketplace platform for in-game assets. Built with Next.js 15, TypeScript, Supabase. Delivered to a paying client.">
+
+    <meta property="og:title" content="Game_trust — Marketplace Platform by Mohammad Yasrul">
+    <meta property="og:description" content="A full secondary marketplace for in-game assets with offer system, admin tools, and financial reporting.">
+    <meta property="og:image" content="../assets/gametrust-screenshot.png">
+    <meta property="og:type" content="article">
+
+    <link rel="icon" type="image/jpeg" href="../assets/logo-algorhytme.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../dist/style.css">
+    <style>body{background:#080808;color:#d4d4d4;font-family:'Inter',sans-serif;}</style>
+</head>
+<body class="bg-canvas text-text-body font-body">
+
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <main id="main">
+        <div class="max-w-[960px] mx-auto px-4 sm:px-8 py-12 sm:py-16">
+
+            <!-- Back -->
+            <a href="../index.html" class="inline-flex items-center gap-2 text-sm text-text-muted hover:text-text-primary transition-colors group mb-12">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="transition-transform group-hover:-translate-x-0.5">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                <span>Back to work</span>
+            </a>
+
+            <!-- Header -->
+            <div class="reveal">
+                <div class="flex flex-wrap items-center gap-3 mb-4">
+                    <h1 class="heading text-h1 text-text-primary">Game_trust</h1>
+                    <span class="px-3 py-0.5 text-[10px] font-semibold tracking-widest bg-accent-amber/10 text-accent-amber rounded-full">CLIENT DELIVERED</span>
+                </div>
+                <p class="text-xl sm:text-2xl text-text-muted max-w-xl">
+                    A full secondary marketplace platform for in-game assets — trusted by a paying client.
+                </p>
+            </div>
+
+            <!-- Screenshot Showcase -->
+            <div class="reveal reveal-delay-1 mt-12 grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="rounded-2xl overflow-hidden border border-border-subtle bg-surface">
+                    <img src="../assets/gametrust-screenshot.png" 
+                         alt="Game_trust admin dashboard overview" 
+                         class="w-full"
+                         width="700" height="467"
+                         loading="lazy" decoding="async">
+                </div>
+                <div class="rounded-2xl overflow-hidden border border-border-subtle bg-surface">
+                    <img src="../assets/gametrust-screenshot (2).png" 
+                         alt="Game_trust transaction management interface" 
+                         class="w-full"
+                         width="700" height="467"
+                         loading="lazy" decoding="async">
+                </div>
+            </div>
+
+            <!-- Case Study -->
+            <div class="reveal mt-14 max-w-3xl">
+
+                <!-- Problem -->
+                <section class="mb-10">
+                    <h2 class="text-xs font-semibold tracking-[0.15em] uppercase text-text-muted mb-4">The Problem</h2>
+                    <div class="text-text-muted body-text space-y-3">
+                        <p>
+                            Trading in-game assets (diamonds, items) is common in multiplayer games, but the process is entirely manual — 
+                            Facebook groups, DM negotiations, and screenshot-based verification. This creates trust issues, 
+                            no transaction records, and makes it impossible for the middleman to track profit and inventory.
+                        </p>
+                        <p>
+                            The client needed a <strong class="text-text-primary font-medium">structured platform</strong> that acts 
+                            as a trusted middleman: buying from sellers at a lower price, selling to buyers at a higher price, 
+                            with verified transactions and financial tracking.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Process -->
+                <section class="mb-10">
+                    <h2 class="text-xs font-semibold tracking-[0.15em] uppercase text-text-muted mb-4">What I Built</h2>
+                    <div class="text-text-muted body-text space-y-3">
+                        <p>
+                            A complete marketplace platform with two separate transaction flows and role-based access control.
+                        </p>
+                    </div>
+                    <ul class="mt-4 space-y-2.5 text-text-muted text-sm">
+                        <li class="flex items-start gap-2">
+                            <span class="text-accent-amber mt-1">&#10003;</span>
+                            <span><strong class="text-text-primary font-medium">Buy Flow:</strong> Admin lists diamonds for sale, buyers create orders, upload payment proof, receive merchant screenshots</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-accent-amber mt-1">&#10003;</span>
+                            <span><strong class="text-text-primary font-medium">Sell Flow:</strong> Sellers submit offers with inventory screenshots, admin negotiates via chat, verifies merchant screenshots with Player ID tracking</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-accent-amber mt-1">&#10003;</span>
+                            <span>Multi-role access: Buyer, Seller, and Admin dashboards with different permissions</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-accent-amber mt-1">&#10003;</span>
+                            <span>Real-time chat per transaction for price negotiation and instructions</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-accent-amber mt-1">&#10003;</span>
+                            <span>Financial dashboard: daily/monthly revenue, expenses, and profit tracking</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-accent-amber mt-1">&#10003;</span>
+                            <span>Voucher system, rating system, and comprehensive admin tools</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Result -->
+                <section>
+                    <h2 class="text-xs font-semibold tracking-[0.15em] uppercase text-text-muted mb-4">The Result</h2>
+                    <div class="text-text-muted body-text space-y-3">
+                        <p>
+                            Successfully <strong class="text-text-primary font-medium">delivered to a paying client</strong> and used in production. 
+                            This was originally built in Laravel (v1), then re-architected in Next.js 15 (v2) with improved performance 
+                            and developer experience.
+                        </p>
+                        <p>
+                            This is the most business-complex project in the portfolio — real financial workflows, role-based permissions, 
+                            and the kind of logic that can&rsquo;t be generated by an AI prompt alone.
+                        </p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Tech Stack -->
+            <div class="reveal mt-12 pt-10 border-t border-border-subtle">
+                <h2 class="text-xs font-semibold tracking-[0.15em] uppercase text-text-muted mb-4">Stack</h2>
+                <div class="flex flex-wrap gap-2 text-sm">
+                    <span class="px-3 py-1.5 bg-surface border border-border-subtle rounded-lg text-text-muted">Next.js 15</span>
+                    <span class="px-3 py-1.5 bg-surface border border-border-subtle rounded-lg text-text-muted">TypeScript</span>
+                    <span class="px-3 py-1.5 bg-surface border border-border-subtle rounded-lg text-text-muted">Supabase (Auth + DB + Realtime)</span>
+                    <span class="px-3 py-1.5 bg-surface border border-border-subtle rounded-lg text-text-muted">PostgreSQL + RLS</span>
+                    <span class="px-3 py-1.5 bg-surface border border-border-subtle rounded-lg text-text-muted">Tailwind CSS</span>
+                    <span class="px-3 py-1.5 bg-surface border border-border-subtle rounded-lg text-text-muted">Multi-role Architecture</span>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="reveal mt-12 pt-10 border-t border-border-subtle flex flex-wrap items-center justify-between gap-4" aria-label="Project navigation">
+                <a href="texty.html" class="inline-flex items-center gap-2 text-sm text-text-muted hover:text-text-primary transition-colors group">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="transition-transform group-hover:-translate-x-0.5">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                    Previous: Texty
+                </a>
+                <a href="medisir.html" class="inline-flex items-center gap-2 text-sm text-text-muted hover:text-text-primary transition-colors group">
+                    Next: MediSir POS
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="transition-transform group-hover:translate-x-0.5">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </nav>
+
+            <!-- CTA Footer -->
+            <div class="reveal mt-10 p-8 bg-surface border border-border-subtle rounded-card text-center">
+                <p class="text-text-muted text-sm mb-4">Butuh platform marketplace atau sistem internal untuk bisnis Anda?</p>
+                <a href="https://wa.me/6281809993513" target="_blank" rel="noopener"
+                   class="refined-button inline-flex items-center gap-2 px-6 py-3 bg-cta-bg text-cta-text rounded-button text-sm font-medium">
+                    Discuss your project on WhatsApp
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

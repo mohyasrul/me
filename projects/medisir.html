@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MediSir POS — Algorhytme</title>
+    <meta name="description" content="MediSir POS: Advanced pharmacy management SaaS. Multi-tenant, realtime inventory, prescriptions, POS. Built with React, TypeScript, Supabase.">
+
+    <meta property="og:title" content="MediSir POS — Technical Case Study by Mohammad Yasrul">
+    <meta property="og:description" content="A full pharmacy management SaaS with POS, multi-cashier, realtime inventory, and prescriptions. Advanced MVP.">
+    <meta property="og:image" content="../assets/medisir-screenshot.png">
+    <meta property="og:type" content="article">
+
+    <link rel="icon" type="image/jpeg" href="../assets/logo-algorhytme.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../dist/style.css">
+    <style>body{background:#080808;color:#d4d4d4;font-family:'Inter',sans-serif;}</style>
+</head>
+<body class="bg-canvas text-text-body font-body">
+
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <main id="main">
+        <div class="max-w-[960px] mx-auto px-4 sm:px-8 py-12 sm:py-16">
+
+            <!-- Back -->
+            <a href="../index.html" class="inline-flex items-center gap-2 text-sm text-text-muted hover:text-text-primary transition-colors group mb-12">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="transition-transform group-hover:-translate-x-0.5">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                <span>Back to work</span>
+            </a>
+
+            <!-- Header -->
+            <div class="reveal">
+                <div class="flex flex-wrap items-center gap-3 mb-4">
+                    <h1 class="heading text-h1 text-text-primary">MediSir POS</h1>
+                    <span class="px-3 py-0.5 text-[10px] font-semibold tracking-widest bg-white/10 text-text-muted rounded-full">TECHNICAL CASE STUDY</span>
+                </div>
+                <p class="text-xl sm:text-2xl text-text-muted max-w-xl">
+                    Advanced pharmacy management SaaS — the most technically complete system I&rsquo;ve built.
+                </p>
+            </div>
+
+            <!-- Screenshot Showcase -->
+            <div class="reveal reveal-delay-1 mt-12 grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="md:col-span-2 rounded-2xl overflow-hidden border border-border-subtle bg-surface">
+                    <img src="../assets/medisir-screenshot.png" 
+                         alt="MediSir POS pharmacy management dashboard with inventory and sales" 
+                         class="w-full"
+                         width="960" height="540"
+                         loading="lazy" decoding="async">
+                </div>
+            </div>
+
+            <!-- Case Study -->
+            <div class="reveal mt-14 max-w-3xl">
+
+                <!-- Problem -->
+                <section class="mb-10">
+                    <h2 class="text-xs font-semibold tracking-[0.15em] uppercase text-text-muted mb-4">The Problem</h2>
+                    <div class="text-text-muted body-text space-y-3">
+                        <p>
+                            Small and medium pharmacies in Indonesia still rely on manual record-keeping or outdated desktop software. 
+                            They need a <strong class="text-text-primary font-medium">modern, cloud-based POS system</strong> that handles 
+                            inventory, prescriptions, multi-cashier operations, and real-time sync — without expensive enterprise pricing.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Process -->
+                <section class="mb-10">
+                    <h2 class="text-xs font-semibold tracking-[0.15em] uppercase text-text-muted mb-4">What I Built</h2>
+                    <div class="text-text-muted body-text space-y-3">
+                        <p>
+                            A production-grade SaaS with deep technical architecture that goes far beyond typical CRUD apps.
+                        </p>
+                    </div>
+                    <ul class="mt-4 space-y-2.5 text-text-muted text-sm">
+                        <li class="flex items-start gap-2">
+                            <span class="text-accent-blue mt-1">&#10003;</span>
+                            <span>Full POS with barcode scanning, multi-payment methods, discounts, and thermal receipt printing + WhatsApp delivery</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-accent-blue mt-1">&#10003;</span>
+                            <span>Multi-tenant architecture with PostgreSQL Row Level Security (RLS) — each pharmacy has completely isolated data</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-accent-blue mt-1">&#10003;</span>
+                            <span>Kasir (cashier) invitation system with 8-character join codes</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-accent-blue mt-1">&#10003;</span>
+                            <span>Realtime inventory sync across all cashiers using Supabase Realtime</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-accent-blue mt-1">&#10003;</span>
+                            <span>Digital prescription module with validity control and direct redemption to POS</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-accent-blue mt-1">&#10003;</span>
+                            <span>Stock movement audit logs, CSV import/export, financial reports with Recharts visualization</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Result & Lessons -->
+                <section>
+                    <h2 class="text-xs font-semibold tracking-[0.15em] uppercase text-text-muted mb-4">The Result &amp; Decision to Pause</h2>
+                    <div class="text-text-muted body-text space-y-3">
+                        <p>
+                            The advanced MVP was <strong class="text-text-primary font-medium">completed with production-grade architecture</strong> 
+                            — fully functional and ready for deployment.
+                        </p>
+                        <p>
+                            However, development was paused before commercial launch due to 
+                            <strong class="text-accent-amber">regulatory requirements</strong> in the Indonesian healthcare industry: 
+                            data protection laws for medical records, digital prescription regulations, and pharmacy licensing requirements (SIA/SIPA).
+                        </p>
+                        <p>
+                            This was not a technical failure — it was a <strong class="text-text-primary font-medium">strategic business decision</strong>. 
+                            The codebase remains a strong foundation for pivoting into general retail and inventory management systems 
+                            (building materials shops, small retail stores, workshops).
+                        </p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Tech Stack -->
+            <div class="reveal mt-12 pt-10 border-t border-border-subtle">
+                <h2 class="text-xs font-semibold tracking-[0.15em] uppercase text-text-muted mb-4">Stack</h2>
+                <div class="flex flex-wrap gap-2 text-sm">
+                    <span class="px-3 py-1.5 bg-surface border border-border-subtle rounded-lg text-text-muted">React + TypeScript</span>
+                    <span class="px-3 py-1.5 bg-surface border border-border-subtle rounded-lg text-text-muted">Vite</span>
+                    <span class="px-3 py-1.5 bg-surface border border-border-subtle rounded-lg text-text-muted">Supabase (Auth + DB + Realtime + Storage)</span>
+                    <span class="px-3 py-1.5 bg-surface border border-border-subtle rounded-lg text-text-muted">PostgreSQL + RLS</span>
+                    <span class="px-3 py-1.5 bg-surface border border-border-subtle rounded-lg text-text-muted">Zustand</span>
+                    <span class="px-3 py-1.5 bg-surface border border-border-subtle rounded-lg text-text-muted">Recharts</span>
+                    <span class="px-3 py-1.5 bg-surface border border-border-subtle rounded-lg text-text-muted">Tailwind CSS</span>
+                    <span class="px-3 py-1.5 bg-surface border border-border-subtle rounded-lg text-text-muted">html5-qrcode</span>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="reveal mt-12 pt-10 border-t border-border-subtle flex flex-wrap items-center justify-between gap-4" aria-label="Project navigation">
+                <a href="game-trust.html" class="inline-flex items-center gap-2 text-sm text-text-muted hover:text-text-primary transition-colors group">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="transition-transform group-hover:-translate-x-0.5">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                    Previous: Game_trust
+                </a>
+                <a href="jokskuy.html" class="inline-flex items-center gap-2 text-sm text-text-muted hover:text-text-primary transition-colors group">
+                    Next: Jokskuy
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="transition-transform group-hover:translate-x-0.5">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </nav>
+
+            <!-- CTA Footer -->
+            <div class="reveal mt-10 p-8 bg-surface border border-border-subtle rounded-card text-center">
+                <p class="text-text-muted text-sm mb-4">Butuh sistem POS atau inventory management yang serius?</p>
+                <a href="https://wa.me/6281809993513" target="_blank" rel="noopener"
+                   class="refined-button inline-flex items-center gap-2 px-6 py-3 bg-cta-bg text-cta-text rounded-button text-sm font-medium">
+                    Discuss your project on WhatsApp
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

@@ -3,4 +3,7 @@ node_modules/
 tmp/
 *.log
 .DS_Store
-Thumbs.dbgithub-akses-token.txt
+Thumbs.db
+github-akses-token.txt
+.playwright-mcp/
+hero-screenshot.png

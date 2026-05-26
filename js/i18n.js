@@ -418,8 +418,8 @@
     document.documentElement.lang = lang === 'id' ? 'id' : 'en';
     const dict = t[lang];
 
-    // Update text content for elements with data-i18n
-    document.querySelectorAll('[data-i18n]').forEach(el => {
+    // Update text content for elements with data-i18n (skip attr-only elements)
+    document.querySelectorAll('[data-i18n]:not([data-i18n-attr])').forEach(el => {
       const key = el.getAttribute('data-i18n');
       if (dict[key] !== undefined) {
         el.innerHTML = dict[key];

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV — Mohammad Yasrul</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --text: #1a1a1a;
+            --text-secondary: #555;
+            --border: #e0e0e0;
+            --accent: #000;
+            --bg: #fff;
+            --section-gap: 28px;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            font-size: 11.5px;
+            line-height: 1.65;
+            background: var(--bg);
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 48px 56px;
+            -webkit-font-smoothing: antialiased;
+        }
+        .heading { font-family: 'Space Grotesk', 'Inter', sans-serif; }
+
+        /* HEADER */
+        .cv-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 24px;
+            padding-bottom: 24px;
+            border-bottom: 2px solid var(--accent);
+            margin-bottom: var(--section-gap);
+        }
+        .cv-header-left h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 28px;
+            font-weight: 600;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            margin-bottom: 4px;
+        }
+        .cv-header-left .title {
+            font-size: 13px;
+            color: var(--text-secondary);
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        .cv-header-left .contact-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 18px;
+            font-size: 10.5px;
+            color: var(--text-secondary);
+        }
+        .cv-header-left .contact-row a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .cv-photo {
+            width: 80px;
+            height: 80px;
+            border-radius: 16px;
+            object-fit: cover;
+            border: 2px solid var(--border);
+            flex-shrink: 0;
+        }
+
+        /* SECTIONS */
+        .cv-section {
+            margin-bottom: var(--section-gap);
+        }
+        .cv-section h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 10px;
+            padding-bottom: 4px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        /* SUMMARY */
+        .summary p {
+            font-size: 12.5px;
+            line-height: 1.7;
+            color: var(--text-secondary);
+        }
+
+        /* PROJECT / EXPERIENCE ITEMS */
+        .exp-item {
+            margin-bottom: 14px;
+        }
+        .exp-item:last-child { margin-bottom: 0; }
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 4px;
+            margin-bottom: 2px;
+        }
+        .exp-header h3 {
+            font-size: 13px;
+            font-weight: 600;
+        }
+        .exp-header .date {
+            font-size: 10px;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+        .exp-role {
+            font-size: 10.5px;
+            color: var(--text-secondary);
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+        .exp-desc {
+            font-size: 11px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        .exp-desc ul {
+            list-style: none;
+            padding: 0;
+        }
+        .exp-desc li {
+            position: relative;
+            padding-left: 14px;
+            margin-bottom: 3px;
+        }
+        .exp-desc li::before {
+            content: '—';
+            position: absolute;
+            left: 0;
+            color: #999;
+        }
+
+        /* SKILLS */
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px 10px;
+        }
+        .skill-tag {
+            font-size: 10.5px;
+            background: #f5f5f5;
+            padding: 3px 10px;
+            border-radius: 6px;
+            font-weight: 500;
+        }
+
+        /* TWO COLUMN */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--section-gap);
+        }
+
+        /* EDUCATION */
+        .edu-item {
+            margin-bottom: 8px;
+        }
+        .edu-item:last-child { margin-bottom: 0; }
+        .edu-item h3 {
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .edu-item .edu-detail {
+            font-size: 10.5px;
+            color: var(--text-secondary);
+        }
+
+        /* PRINT */
+        @media print {
+            body {
+                padding: 36px 40px;
+                max-width: 100%;
+            }
+            .cv-section { page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <div class="cv-header">
+        <div class="cv-header-left">
+            <h1>Mohammad Yasrul</h1>
+            <div class="title">Product Builder &amp; Full-Stack Developer</div>
+            <div class="contact-row">
+                <span>📧 <a href="mailto:admin@algorhytme.site">admin@algorhytme.site</a></span>
+                <span>📱 <a href="https://wa.me/6281809993513">+62 818-0999-3513</a></span>
+                <span>🌐 <a href="https://algorhytme.site">algorhytme.site</a></span>
+                <span>💻 <a href="https://github.com/mohyasrul">github.com/mohyasrul</a></span>
+            </div>
+        </div>
+        <img src="assets/foto-profile.jpg" 
+             alt="Mohammad Yasrul" 
+             class="cv-photo"
+             width="80" height="80">
+    </div>
+
+    <!-- SUMMARY -->
+    <div class="cv-section">
+        <h2>Summary</h2>
+        <div class="summary">
+            <p>
+                Final-year Informatics student and solo builder focused on shipping practical, production-grade web products. 
+                From published Chrome Extensions to complex marketplace platforms, I build end-to-end with modern stacks 
+                (React, TypeScript, Supabase) and deliver to paying clients. I optimize for speed without sacrificing quality.
+            </p>
+        </div>
+    </div>
+
+    <!-- SELECTED PROJECTS (as experience) -->
+    <div class="cv-section">
+        <h2>Selected Projects</h2>
+
+        <div class="exp-item">
+            <div class="exp-header">
+                <h3>MediSir POS — Pharmacy Management SaaS</h3>
+                <span class="date">2025</span>
+            </div>
+            <div class="exp-role">Full-Stack Developer · Solo</div>
+            <div class="exp-desc">
+                <ul>
+                    <li>Advanced POS with barcode scanning, multi-payment, thermal receipt + WhatsApp delivery</li>
+                    <li>Multi-tenant architecture with PostgreSQL Row Level Security and cashier invitation system</li>
+                    <li>Realtime inventory sync, digital prescriptions, stock audit logs, financial reports</li>
+                    <li>Stack: React, TypeScript, Vite, Supabase (Auth + DB + Realtime), Zustand, Recharts</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="exp-item">
+            <div class="exp-header">
+                <h3>Game_trust — In-Game Asset Marketplace</h3>
+                <span class="date">2024–2025</span>
+            </div>
+            <div class="exp-role">Full-Stack Developer · Client Project</div>
+            <div class="exp-desc">
+                <ul>
+                    <li>Complete marketplace with dual transaction flows (buy &amp; sell), role-based access control</li>
+                    <li>Admin dashboard: listing management, offer review, payment verification, financial reporting</li>
+                    <li>Real-time chat per transaction, voucher system, rating system</li>
+                    <li>Stack: Next.js 15, TypeScript, Supabase, PostgreSQL + RLS, Tailwind CSS</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="exp-item">
+            <div class="exp-header">
+                <h3>Texty — Chrome Extension (Published)</h3>
+                <span class="date">2025</span>
+            </div>
+            <div class="exp-role">Solo Developer · Product Owner</div>
+            <div class="exp-desc">
+                <ul>
+                    <li>Published on Chrome Web Store — text expander for freelancers, support teams, power users</li>
+                    <li>Manifest V3 architecture: content scripts, service worker, inline search, undo support</li>
+                    <li>Full marketing site with license key system (LemonSqueezy + Supabase)</li>
+                    <li>Stack: Plasmo, TypeScript, Next.js, Supabase, LemonSqueezy</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="exp-item">
+            <div class="exp-header">
+                <h3>Jokskuy — Order Management Platform</h3>
+                <span class="date">2025</span>
+            </div>
+            <div class="exp-role">Full-Stack Developer · Client Project</div>
+            <div class="exp-desc">
+                <ul>
+                    <li>Client + Operator + Admin system for educational service order lifecycle</li>
+                    <li>Real-time chat, payment proof verification, delivery tracking, admin finance views</li>
+                    <li>Stack: React 19, Vite, Supabase, TanStack Query, Tailwind CSS</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- SKILLS + EDUCATION (two column) -->
+    <div class="two-col">
+        <div class="cv-section">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <span class="skill-tag">TypeScript</span>
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">Next.js</span>
+                <span class="skill-tag">Supabase</span>
+                <span class="skill-tag">PostgreSQL</span>
+                <span class="skill-tag">Chrome Extensions (MV3)</span>
+                <span class="skill-tag">Tailwind CSS</span>
+                <span class="skill-tag">Node.js</span>
+                <span class="skill-tag">Laravel / PHP</span>
+                <span class="skill-tag">Git / GitHub</span>
+                <span class="skill-tag">Zustand</span>
+                <span class="skill-tag">TanStack Query</span>
+                <span class="skill-tag">Vite</span>
+                <span class="skill-tag">Recharts</span>
+                <span class="skill-tag">LemonSqueezy</span>
+            </div>
+        </div>
+
+        <div class="cv-section">
+            <h2>Education</h2>
+            <div class="edu-item">
+                <h3>Informatics (S.Kom)</h3>
+                <div class="edu-detail">Final Year · Expected 2026</div>
+            </div>
+
+            <div style="margin-top: 16px;">
+                <h2>Languages</h2>
+                <div class="skills-grid" style="margin-top: 4px;">
+                    <span class="skill-tag">🇮🇩 Bahasa Indonesia (Native)</span>
+                    <span class="skill-tag">🇬🇧 English (Professional)</span>
+                </div>
+            </div>
+
+            <div style="margin-top: 16px;">
+                <h2>What I Offer</h2>
+                <div class="exp-desc" style="margin-top: 4px;">
+                    <ul>
+                        <li>Full-stack web applications</li>
+                        <li>Chrome Extensions</li>
+                        <li>SaaS & multi-tenant systems</li>
+                        <li>Landing pages & websites</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- NOTE -->
+    <div style="margin-top: 24px; padding-top: 12px; border-top: 1px solid var(--border); text-align: center; font-size: 9px; color: #999;">
+        Mohammad Yasrul · admin@algorhytme.site · +62 818-0999-3513 · algorhytme.site
+    </div>
+
+</body>
+</html>

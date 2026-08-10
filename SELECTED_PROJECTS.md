@@ -4,13 +4,26 @@ Dokumen ini menjelaskan kenapa proyek-proyek berikut dipilih untuk ditampilkan d
 
 ---
 
-## 1. Texty (Chrome Extension + Marketing Site)
+## 1. Satukos (Boarding House Management SaaS)
+
+**Status**: Published & Live di satukos.com  
+**Kategori**: Real shipped product / SaaS
+
+**Alasan dimasukkan:**
+- Produk SaaS live yang menyelesaikan masalah nyata operasional kos-kosan di Indonesia.
+- Mengintegrasikan sistem pembayaran instan (QRIS) dengan rekonsiliasi otomatis status kamar.
+- Fitur penagihan otomatis via WhatsApp API dan check-in digital via QR code.
+- Menunjukkan kemampuan membangun aplikasi manajemen bisnis berbasis web dengan UI/UX yang modern, fungsional, dan scalable.
+
+---
+
+## 2. Texty (Chrome Extension + Marketing Site)
 
 **Status**: Published di Chrome Web Store  
 **Kategori**: Real shipped product
 
 **Alasan dimasukkan:**
-- Satu-satunya proyek yang benar-benar sudah live dan bisa digunakan publik.
+- Proyek yang benar-benar sudah live dan bisa digunakan publik.
 - Menunjukkan kemampuan end-to-end: Chrome Extension (MV3) + Next.js website + payment integration (LemonSqueezy) + backend (Supabase).
 - Memiliki sistem lisensi yang sebenarnya.
 - Menunjukkan product thinking, bukan hanya coding (target user jelas: freelancer & VA).
@@ -20,7 +33,7 @@ Dokumen ini menjelaskan kenapa proyek-proyek berikut dipilih untuk ditampilkan d
 
 ---
 
-## 2. Game_trust (Next.js Marketplace Platform)
+## 3. Game_trust (Next.js Marketplace Platform)
 
 **Status**: Delivered to paying client  
 **Kategori**: Client project / Complex web application
@@ -37,7 +50,7 @@ Dokumen ini menjelaskan kenapa proyek-proyek berikut dipilih untuk ditampilkan d
 
 ---
 
-## 3. MediSir POS (Pharmacy Management SaaS)
+## 4. MediSir POS (Pharmacy Management SaaS)
 
 **Status**: Advanced MVP completed, paused before launch  
 **Kategori**: Technical case study / Deep full-stack project

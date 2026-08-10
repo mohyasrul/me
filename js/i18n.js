@@ -169,6 +169,10 @@
       'satukos.li3': 'QR code door scan for digital check-in and quick tenant access',
       'satukos.li4': 'Multi-property dashboard tracking occupancy rates, pending bills, and financial reports',
       'satukos.result': 'Satukos is live and accessible at <strong class="text-text-primary font-medium">satukos.com</strong>. It eliminates manual rent chasing and provides boarding house owners with a hands-free, automated operations hub.',
+      'satukos.btn': 'Visit Satukos.com',
+      'satukos.next': 'Next: Texty',
+      'texty.prev': 'Previous: Satukos',
+      'satukos.cta.text': 'Interested in SaaS applications or custom business tools?',
 
       // Texty page
       'texty.title': 'Texty',
@@ -384,6 +388,10 @@
       'satukos.li3': 'Scan QR di pintu kamar untuk check-in digital dan akses informasi kamar',
       'satukos.li4': 'Dashboard multi-properti untuk memantau tingkat hunian, tagihan pending, dan laporan keuangan',
       'satukos.result': 'Satukos sudah aktif dan dapat diakses publik di <strong class="text-text-primary font-medium">satukos.com</strong>. Aplikasi ini memangkas proses penagihan manual dan memberikan pusat kontrol operasional yang serba otomatis bagi pemilik kos.',
+      'satukos.btn': 'Kunjungi Satukos.com',
+      'satukos.next': 'Berikutnya: Texty',
+      'texty.prev': 'Sebelumnya: Satukos',
+      'satukos.cta.text': 'Tertarik dengan aplikasi SaaS atau tools bisnis kustom?',
 
       // Texty page
       'texty.title': 'Texty',
@@ -441,15 +449,19 @@
 
   // ── INIT ──
   function getLang() {
-    const stored = localStorage.getItem(LANG_KEY);
-    if (stored === 'id' || stored === 'en') return stored;
+    try {
+      const stored = localStorage.getItem(LANG_KEY);
+      if (stored === 'id' || stored === 'en') return stored;
+    } catch (e) {}
     // Default: browser language
     const browserLang = navigator.language || navigator.userLanguage || '';
     return browserLang.startsWith('id') ? 'id' : 'en';
   }
 
   function setLang(lang) {
-    localStorage.setItem(LANG_KEY, lang);
+    try {
+      localStorage.setItem(LANG_KEY, lang);
+    } catch (e) {}
     applyLang(lang);
     updateToggle(lang);
   }

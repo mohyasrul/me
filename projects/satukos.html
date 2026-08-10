@@ -46,7 +46,7 @@
 
             <div class="reveal reveal-delay-1 flex flex-wrap gap-3 mt-8">
                 <a href="https://satukos.com" target="_blank" rel="noopener" class="refined-button inline-flex items-center gap-2 px-6 py-3 bg-cta-bg text-cta-text rounded-button text-sm font-medium hover:bg-cta-hover">
-                    <span>Visit Satukos.com</span>
+                    <span data-i18n="satukos.btn">Visit Satukos.com</span>
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
                 </a>
             </div>
@@ -96,9 +96,24 @@
                 </div>
             </div>
 
+            <nav class="reveal mt-12 pt-10 border-t border-border-subtle flex flex-wrap items-center justify-between gap-4" data-i18n-attr="aria-label" data-i18n="project.nav">
+                <span class="text-sm text-text-subtle" data-i18n="project.prev">&larr; Previous</span>
+                <a href="texty.html" class="inline-flex items-center gap-2 text-sm text-text-muted hover:text-text-primary transition-colors group">
+                    <span data-i18n="satukos.next">Next: Texty</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="transition-transform group-hover:translate-x-0.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </nav>
+
+            <div class="reveal mt-10 p-8 bg-surface border border-border-subtle rounded-card text-center">
+                <p class="text-text-muted text-sm mb-4" data-i18n="satukos.cta.text">Interested in SaaS applications or custom business tools?</p>
+                <a href="https://wa.me/6281809993513" target="_blank" rel="noopener" class="refined-button inline-flex items-center gap-2 px-6 py-3 bg-cta-bg text-cta-text rounded-button text-sm font-medium">
+                    <span data-i18n="project.cta">Discuss your project on WhatsApp</span>
+                </a>
+            </div>
+
             <!-- Footer -->
             <footer class="mt-20 pt-8 border-t border-border-subtle flex flex-col sm:flex-row items-center justify-between text-xs text-text-muted gap-y-4">
-                <span>&copy; 2026 Mohammad Yasrul. Built with purpose.</span>
+                <span data-i18n="footer.by">&copy; 2026 Mohammad Yasrul. Built with purpose.</span>
                 <a href="../index.html" class="hover:text-text-primary transition-colors" data-i18n="project.back">Back to work</a>
             </footer>
 

@@ -46,6 +46,15 @@
       'work.filter.casestudy': 'Case Study',
       'work.filter.aria': 'Filter projects',
 
+      // Satukos card
+      'work.satukos.title': 'Satukos',
+      'work.satukos.badge': 'LIVE',
+      'work.satukos.desc': 'A web-based SaaS platform to manage boarding house operations. Features automated WhatsApp billing, instant QRIS payments, QR door check-in, and real-time financial reporting.',
+      'work.satukos.tag1': 'SaaS Platform',
+      'work.satukos.tag2': 'Tailwind CSS',
+      'work.satukos.tag3': 'QRIS & WhatsApp',
+      'work.satukos.img': 'Satukos boarding house management dashboard',
+
       // Texty card
       'work.texty.title': 'Texty',
       'work.texty.badge': 'LIVE',
@@ -150,6 +159,17 @@
       'project.cta': 'Discuss your project on WhatsApp',
       'project.nav': 'Project navigation',
 
+      // Satukos page
+      'satukos.title': 'Satukos',
+      'satukos.tagline': 'One application, unlimited boarding house management.',
+      'satukos.problem': 'Managing boarding houses (kos) manually involves tedious bookkeeping, manual WhatsApp payment reminders, delayed rent collection, and time-consuming bank statement checking. Property owners waste dozens of hours every month trying to track tenant status across spreadsheets and chat histories.',
+      'satukos.built': 'Satukos is a modern, web-based SaaS platform that automates the entire boarding house management lifecycle into a single centralized dashboard.',
+      'satukos.li1': 'Automated WhatsApp bill dispatching with instant payment links for tenants',
+      'satukos.li2': 'Instant QRIS payment gateway with automatic room status reconciliation',
+      'satukos.li3': 'QR code door scan for digital check-in and quick tenant access',
+      'satukos.li4': 'Multi-property dashboard tracking occupancy rates, pending bills, and financial reports',
+      'satukos.result': 'Satukos is live and accessible at <strong class="text-text-primary font-medium">satukos.com</strong>. It eliminates manual rent chasing and provides boarding house owners with a hands-free, automated operations hub.',
+
       // Texty page
       'texty.title': 'Texty',
       'texty.tagline': 'The pragmatic text expander for people who write the same things every day.',
@@ -240,6 +260,15 @@
       'work.filter.client': 'Klien',
       'work.filter.casestudy': 'Studi Kasus',
       'work.filter.aria': 'Filter proyek',
+
+      // Satukos card
+      'work.satukos.title': 'Satukos',
+      'work.satukos.badge': 'LIVE',
+      'work.satukos.desc': 'Platform SaaS berbasis web untuk mengelola operasional kos-kosan. Dilengkapi tagihan WhatsApp otomatis, pembayaran QRIS instan, scan QR pintu kamar, dan laporan keuangan realtime.',
+      'work.satukos.tag1': 'SaaS Platform',
+      'work.satukos.tag2': 'Tailwind CSS',
+      'work.satukos.tag3': 'QRIS & WhatsApp',
+      'work.satukos.img': 'Dashboard manajemen kos Satukos',
 
       // Texty card
       'work.texty.title': 'Texty',
@@ -344,6 +373,17 @@
       'project.result': 'Hasil',
       'project.cta': 'Diskusikan proyek Anda di WhatsApp',
       'project.nav': 'Navigasi proyek',
+
+      // Satukos page
+      'satukos.title': 'Satukos',
+      'satukos.tagline': 'Satu Aplikasi, Kelola Kos Tanpa Batas.',
+      'satukos.problem': 'Mengelola bisnis kos secara manual membutuhkan pembukuan rumit, pengingat tagihan WhatsApp satu-per-satu, risiko keterlambatan bayar, serta pengecekan mutasi bank manual. Pemilik kos menghabiskan puluhan jam setiap bulan hanya untuk memantau status penyewa lewat tabel dan pesan chat.',
+      'satukos.built': 'Satukos adalah platform SaaS modern berbasis web yang mengotomatiskan seluruh siklus manajemen kos dalam satu dashboard terpusat.',
+      'satukos.li1': 'Pengiriman tagihan otomatis via WhatsApp dilengkapi link pembayaran instan untuk penyewa',
+      'satukos.li2': 'Integrasi payment gateway QRIS instan dengan rekonsiliasi status kamar otomatis',
+      'satukos.li3': 'Scan QR di pintu kamar untuk check-in digital dan akses informasi kamar',
+      'satukos.li4': 'Dashboard multi-properti untuk memantau tingkat hunian, tagihan pending, dan laporan keuangan',
+      'satukos.result': 'Satukos sudah aktif dan dapat diakses publik di <strong class="text-text-primary font-medium">satukos.com</strong>. Aplikasi ini memangkas proses penagihan manual dan memberikan pusat kontrol operasional yang serba otomatis bagi pemilik kos.',
 
       // Texty page
       'texty.title': 'Texty',

@@ -5,8 +5,7 @@
   "private": true,
   "scripts": {
     "build:css": "tailwindcss -i ./src/input.css -o ./dist/style.css --minify",
-    "build:html": "node scripts/build-html.js",
-    "build": "npm run build:css && npm run build:html",
+    "build": "npm run build:css",
     "dev": "tailwindcss -i ./src/input.css -o ./dist/style.css --watch",
     "optimize:images": "node scripts/optimize-images.js"
   },

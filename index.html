@@ -338,125 +338,123 @@
 
         <div class="elegant-divider max-w-[1280px] mx-auto px-4 sm:px-8"></div>
 
-        <!-- RESUME & CAPABILITIES -->
-        <section id="resume" class="max-w-[1280px] mx-auto px-4 sm:px-8 py-section space-y-12" aria-labelledby="resume-heading">
+        <!-- RESUME & CAPABILITIES (EDITORIAL SPECS MATRIX) -->
+        <section id="resume" class="max-w-[1280px] mx-auto px-4 sm:px-8 py-section space-y-16" aria-labelledby="resume-heading">
             
-            <!-- SECTION HEADER & PROFILE BANNER -->
-            <div class="reveal space-y-8">
-                <div class="flex flex-col md:flex-row md:items-end justify-between gap-y-4 border-b border-border-subtle pb-8">
-                    <div>
-                        <div class="section-label text-text-muted mb-2 font-mono text-xs tracking-widest" data-i18n="resume.label">RESUME &amp; CAPABILITIES</div>
-                        <h2 id="resume-heading" class="heading text-h2 text-text-primary" data-i18n="resume.heading">Background &amp; Expertise</h2>
+            <!-- EDITORIAL BIO HEADER -->
+            <div class="reveal flex flex-col md:flex-row md:items-center justify-between gap-8 border-b border-white/10 pb-10">
+                <div class="flex items-center gap-x-6">
+                    <div class="relative flex-shrink-0">
+                        <img src="assets/foto-profile.jpg" data-i18n-attr="alt" data-i18n="resume.photo" alt="Mohammad Yasrul profile photo" class="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover ring-2 ring-accent-emerald/40 shadow-2xl" width="96" height="96" loading="lazy">
+                        <span class="absolute bottom-1 right-1 w-4 h-4 rounded-full bg-accent-emerald border-2 border-canvas animate-pulse"></span>
                     </div>
-                    <p class="text-text-muted text-sm body-text max-w-md leading-relaxed" data-i18n="resume.subtitle">Informatics Student &middot; Product Builder &middot; Indonesia</p>
-                </div>
-
-                <!-- PROFILE BANNER -->
-                <div class="p-6 sm:p-8 bg-surface/40 border border-white/10 rounded-2xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 hover:border-white/20 transition-all">
-                    <div class="flex items-center gap-x-5">
-                        <img src="assets/foto-profile.jpg" data-i18n-attr="alt" data-i18n="resume.photo" alt="Mohammad Yasrul profile photo" class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl object-cover ring-1 ring-white/20 shadow-md flex-shrink-0" width="80" height="80" loading="lazy">
-                        <div class="space-y-1.5">
-                            <h3 class="text-xl sm:text-2xl text-text-primary font-semibold" data-i18n="resume.name">Mohammad Yasrul</h3>
-                            <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-text-muted">
-                                <span class="inline-flex items-center gap-1.5 text-accent-emerald font-medium">
-                                    <span class="w-1.5 h-1.5 rounded-full bg-accent-emerald animate-pulse"></span>
-                                    <span data-i18n="resume.availability">Available for projects</span>
-                                </span>
-                                <span class="text-text-subtle hidden sm:inline">&bull;</span>
-                                <span data-i18n="resume.location">Indonesia &middot; UTC+7</span>
-                            </div>
+                    <div class="space-y-2">
+                        <h2 id="resume-heading" class="heading text-3xl sm:text-4xl text-text-primary" data-i18n="resume.name">Mohammad Yasrul</h2>
+                        <p class="text-text-muted text-sm body-text" data-i18n="resume.subtitle">Informatics Student &middot; Product Builder &middot; Indonesia</p>
+                        <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs font-mono text-text-subtle">
+                            <span class="text-accent-emerald font-medium" data-i18n="resume.availability">Available for projects</span>
+                            <span>&bull;</span>
+                            <span data-i18n="resume.location">Indonesia &middot; UTC+7</span>
                         </div>
                     </div>
-                    <a href="assets/cv-mohammad-yasrul.pdf" download class="refined-button inline-flex items-center gap-2 px-5 py-2.5 text-xs font-semibold uppercase tracking-wider bg-cta-bg text-cta-text rounded-xl hover:bg-cta-hover transition-all shadow-sm group">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="group-hover:translate-y-0.5 transition-transform"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-                        <span data-i18n="resume.cv">Download CV</span>
-                    </a>
                 </div>
+
+                <a href="assets/cv-mohammad-yasrul.pdf" download class="refined-button inline-flex items-center gap-3 px-6 py-3.5 text-xs font-mono font-semibold uppercase tracking-wider bg-accent-emerald text-canvas rounded-full hover:bg-accent-emerald/90 hover:scale-105 transition-all shadow-lg shadow-accent-emerald/10 self-start md:self-auto group">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="group-hover:translate-y-0.5 transition-transform"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                    <span data-i18n="resume.cv">Download CV</span>
+                </a>
             </div>
 
-            <!-- CORE STACK MATRIX (3 CLEAN COLUMNS) -->
-            <div class="reveal space-y-4">
-                <h3 class="text-xs font-mono font-medium tracking-widest uppercase text-text-subtle" data-i18n="resume.skills">Core Stack &amp; Capabilities</h3>
-                <div class="grid md:grid-cols-3 gap-6">
-                    <!-- Frontend -->
-                    <div class="p-6 bg-surface/40 border border-white/10 rounded-2xl space-y-3">
-                        <div class="text-sm font-semibold text-text-primary flex items-center gap-2">
-                            <span class="w-2 h-2 rounded-full bg-accent-emerald"></span>
+            <!-- CORE STACK SPECS MATRIX -->
+            <div class="reveal space-y-6">
+                <div class="flex items-center justify-between">
+                    <span class="font-mono text-xs text-text-subtle tracking-widest uppercase" data-i18n="resume.skills">Core Stack &amp; Specs</span>
+                    <span class="font-mono text-xs text-text-subtle">01 &mdash; 03</span>
+                </div>
+
+                <div class="divide-y divide-white/10 border-y border-white/10">
+                    <!-- Row 1: Frontend -->
+                    <div class="py-6 sm:py-8 grid md:grid-cols-12 gap-4 items-baseline hover:bg-white/[0.02] transition-colors px-2 rounded-xl group">
+                        <div class="md:col-span-3 font-mono text-xs text-accent-emerald tracking-wider flex items-center gap-2">
+                            <span>01 /</span>
                             <span data-i18n="resume.stack.frontend">Frontend Engine</span>
                         </div>
-                        <div class="flex flex-wrap gap-2 text-xs text-text-muted pt-1">
-                            <span class="px-2.5 py-1 bg-white/5 rounded-lg border border-white/5">TypeScript</span>
-                            <span class="px-2.5 py-1 bg-white/5 rounded-lg border border-white/5">React 19</span>
-                            <span class="px-2.5 py-1 bg-white/5 rounded-lg border border-white/5">Next.js 15</span>
-                            <span class="px-2.5 py-1 bg-white/5 rounded-lg border border-white/5">Tailwind CSS</span>
+                        <div class="md:col-span-9 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm sm:text-base font-mono text-text-primary">
+                            <span class="group-hover:text-accent-emerald transition-colors">TypeScript</span>
+                            <span class="text-text-subtle">&bull;</span>
+                            <span class="group-hover:text-accent-emerald transition-colors">React 19</span>
+                            <span class="text-text-subtle">&bull;</span>
+                            <span class="group-hover:text-accent-emerald transition-colors">Next.js 15</span>
+                            <span class="text-text-subtle">&bull;</span>
+                            <span class="group-hover:text-accent-emerald transition-colors">Tailwind CSS</span>
                         </div>
                     </div>
-                    <!-- Backend -->
-                    <div class="p-6 bg-surface/40 border border-white/10 rounded-2xl space-y-3">
-                        <div class="text-sm font-semibold text-text-primary flex items-center gap-2">
-                            <span class="w-2 h-2 rounded-full bg-accent-blue"></span>
+
+                    <!-- Row 2: Backend -->
+                    <div class="py-6 sm:py-8 grid md:grid-cols-12 gap-4 items-baseline hover:bg-white/[0.02] transition-colors px-2 rounded-xl group">
+                        <div class="md:col-span-3 font-mono text-xs text-accent-blue tracking-wider flex items-center gap-2">
+                            <span>02 /</span>
                             <span data-i18n="resume.stack.backend">Backend &amp; Cloud</span>
                         </div>
-                        <div class="flex flex-wrap gap-2 text-xs text-text-muted pt-1">
-                            <span class="px-2.5 py-1 bg-white/5 rounded-lg border border-white/5">Node.js</span>
-                            <span class="px-2.5 py-1 bg-white/5 rounded-lg border border-white/5">Supabase</span>
-                            <span class="px-2.5 py-1 bg-white/5 rounded-lg border border-white/5">PostgreSQL</span>
-                            <span class="px-2.5 py-1 bg-white/5 rounded-lg border border-white/5">Laravel / PHP</span>
+                        <div class="md:col-span-9 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm sm:text-base font-mono text-text-primary">
+                            <span class="group-hover:text-accent-blue transition-colors">Node.js</span>
+                            <span class="text-text-subtle">&bull;</span>
+                            <span class="group-hover:text-accent-blue transition-colors">Supabase</span>
+                            <span class="text-text-subtle">&bull;</span>
+                            <span class="group-hover:text-accent-blue transition-colors">PostgreSQL</span>
+                            <span class="text-text-subtle">&bull;</span>
+                            <span class="group-hover:text-accent-blue transition-colors">Laravel / PHP</span>
                         </div>
                     </div>
-                    <!-- Tools -->
-                    <div class="p-6 bg-surface/40 border border-white/10 rounded-2xl space-y-3">
-                        <div class="text-sm font-semibold text-text-primary flex items-center gap-2">
-                            <span class="w-2 h-2 rounded-full bg-accent-amber"></span>
+
+                    <!-- Row 3: Tools -->
+                    <div class="py-6 sm:py-8 grid md:grid-cols-12 gap-4 items-baseline hover:bg-white/[0.02] transition-colors px-2 rounded-xl group">
+                        <div class="md:col-span-3 font-mono text-xs text-accent-amber tracking-wider flex items-center gap-2">
+                            <span>03 /</span>
                             <span data-i18n="resume.stack.tools">Architecture &amp; Tools</span>
                         </div>
-                        <div class="flex flex-wrap gap-2 text-xs text-text-muted pt-1">
-                            <span class="px-2.5 py-1 bg-white/5 rounded-lg border border-white/5">Chrome MV3</span>
-                            <span class="px-2.5 py-1 bg-white/5 rounded-lg border border-white/5">Realtime WebSockets</span>
-                            <span class="px-2.5 py-1 bg-white/5 rounded-lg border border-white/5">QRIS / Stripe</span>
-                            <span class="px-2.5 py-1 bg-white/5 rounded-lg border border-white/5">Git / GitHub</span>
+                        <div class="md:col-span-9 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm sm:text-base font-mono text-text-primary">
+                            <span class="group-hover:text-accent-amber transition-colors">Chrome MV3</span>
+                            <span class="text-text-subtle">&bull;</span>
+                            <span class="group-hover:text-accent-amber transition-colors">Realtime WebSockets</span>
+                            <span class="text-text-subtle">&bull;</span>
+                            <span class="group-hover:text-accent-amber transition-colors">QRIS / Stripe</span>
+                            <span class="text-text-subtle">&bull;</span>
+                            <span class="group-hover:text-accent-amber transition-colors">Git / GitHub</span>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- WHAT I CAN BUILD FOR YOU (2x2 GRID) -->
-            <div class="reveal space-y-4">
-                <h3 class="text-xs font-mono font-medium tracking-widest uppercase text-text-subtle" data-i18n="resume.offer">What I Can Build For You</h3>
-                <div class="grid sm:grid-cols-2 gap-6">
-                    <div class="group p-6 sm:p-8 bg-surface/40 border border-white/10 hover:border-white/20 rounded-2xl transition-all duration-300 hover:-translate-y-1 space-y-3">
-                        <div class="flex items-center justify-between">
-                            <span class="font-mono text-xs text-accent-emerald font-semibold">01</span>
-                            <span class="w-1.5 h-1.5 rounded-full bg-accent-emerald/50 group-hover:bg-accent-emerald transition-colors"></span>
-                        </div>
-                        <h4 class="font-semibold text-text-primary text-base sm:text-lg group-hover:text-accent-emerald transition-colors" data-i18n="resume.offer1.title">Web Applications &amp; Marketplaces</h4>
-                        <p class="text-text-muted text-xs sm:text-sm body-text leading-relaxed" data-i18n="resume.offer1.desc">Full-stack SaaS apps built with React, Next.js, and Supabase. From custom marketplaces to high-traffic internal tools.</p>
+            <!-- CAPABILITIES (EDITORIAL 2-COLUMN LIST) -->
+            <div class="reveal space-y-8 pt-4">
+                <div class="flex items-center justify-between border-b border-white/10 pb-4">
+                    <span class="font-mono text-xs text-text-subtle tracking-widest uppercase" data-i18n="resume.offer">What I Can Build For You</span>
+                    <span class="font-mono text-xs text-text-subtle">SERVICES &amp; SOLUTIONS</span>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-x-12 gap-y-10">
+                    <div class="group border-l-2 border-white/10 hover:border-accent-emerald pl-6 transition-all space-y-2">
+                        <div class="font-mono text-xs text-accent-emerald font-semibold">01 / WEB APPS</div>
+                        <h4 class="text-xl text-text-primary font-semibold group-hover:text-accent-emerald transition-colors" data-i18n="resume.offer1.title">Web Applications &amp; Marketplaces</h4>
+                        <p class="text-text-muted text-sm body-text leading-relaxed" data-i18n="resume.offer1.desc">Full-stack SaaS apps built with React, Next.js, and Supabase. From custom marketplaces to high-traffic internal tools.</p>
                     </div>
 
-                    <div class="group p-6 sm:p-8 bg-surface/40 border border-white/10 hover:border-white/20 rounded-2xl transition-all duration-300 hover:-translate-y-1 space-y-3">
-                        <div class="flex items-center justify-between">
-                            <span class="font-mono text-xs text-accent-blue font-semibold">02</span>
-                            <span class="w-1.5 h-1.5 rounded-full bg-accent-blue/50 group-hover:bg-accent-blue transition-colors"></span>
-                        </div>
-                        <h4 class="font-semibold text-text-primary text-base sm:text-lg group-hover:text-accent-blue transition-colors" data-i18n="resume.offer2.title">Chrome Extensions (MV3)</h4>
-                        <p class="text-text-muted text-xs sm:text-sm body-text leading-relaxed" data-i18n="resume.offer2.desc">Published on Chrome Web Store. Built with Manifest V3, TypeScript, background service workers, and payment licensing.</p>
+                    <div class="group border-l-2 border-white/10 hover:border-accent-blue pl-6 transition-all space-y-2">
+                        <div class="font-mono text-xs text-accent-blue font-semibold">02 / BROWSER TOOLS</div>
+                        <h4 class="text-xl text-text-primary font-semibold group-hover:text-accent-blue transition-colors" data-i18n="resume.offer2.title">Chrome Extensions (MV3)</h4>
+                        <p class="text-text-muted text-sm body-text leading-relaxed" data-i18n="resume.offer2.desc">Published on Chrome Web Store. Built with Manifest V3, TypeScript, background service workers, and payment licensing.</p>
                     </div>
 
-                    <div class="group p-6 sm:p-8 bg-surface/40 border border-white/10 hover:border-white/20 rounded-2xl transition-all duration-300 hover:-translate-y-1 space-y-3">
-                        <div class="flex items-center justify-between">
-                            <span class="font-mono text-xs text-accent-amber font-semibold">03</span>
-                            <span class="w-1.5 h-1.5 rounded-full bg-accent-amber/50 group-hover:bg-accent-amber transition-colors"></span>
-                        </div>
-                        <h4 class="font-semibold text-text-primary text-base sm:text-lg group-hover:text-accent-amber transition-colors" data-i18n="resume.offer3.title">SaaS &amp; Realtime Systems</h4>
+                    <div class="group border-l-2 border-white/10 hover:border-accent-amber pl-6 transition-all space-y-2">
+                        <div class="font-mono text-xs text-accent-amber font-semibold">03 / REALTIME SAAS</div>
+                        <h4 class="text-xl text-text-primary font-semibold group-hover:text-accent-amber transition-colors" data-i18n="resume.offer3.title">SaaS &amp; Realtime Systems</h4>
                         <p class="text-text-muted text-xs sm:text-sm body-text leading-relaxed" data-i18n="resume.offer3.desc">Multi-tenant architecture, multi-role RBAC access, live WebSocket sync, automated QRIS/Stripe billing, and admin dashboards.</p>
                     </div>
 
-                    <div class="group p-6 sm:p-8 bg-surface/40 border border-white/10 hover:border-white/20 rounded-2xl transition-all duration-300 hover:-translate-y-1 space-y-3">
-                        <div class="flex items-center justify-between">
-                            <span class="font-mono text-xs text-accent-rose font-semibold">04</span>
-                            <span class="w-1.5 h-1.5 rounded-full bg-accent-rose/50 group-hover:bg-accent-rose transition-colors"></span>
-                        </div>
-                        <h4 class="font-semibold text-text-primary text-base sm:text-lg group-hover:text-accent-rose transition-colors" data-i18n="resume.offer4.title">High-Performance Websites</h4>
+                    <div class="group border-l-2 border-white/10 hover:border-accent-rose pl-6 transition-all space-y-2">
+                        <div class="font-mono text-xs text-accent-rose font-semibold">04 / HIGH-SPEED WEB</div>
+                        <h4 class="text-xl text-text-primary font-semibold group-hover:text-accent-rose transition-colors" data-i18n="resume.offer4.title">High-Performance Websites</h4>
                         <p class="text-text-muted text-xs sm:text-sm body-text leading-relaxed" data-i18n="resume.offer4.desc">Bespoke, anti-slop interfaces optimized for core web vitals, SEO ranking, and high conversion rates.</p>
                     </div>
                 </div>

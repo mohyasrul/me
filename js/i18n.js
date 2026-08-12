@@ -94,6 +94,7 @@
 
       // ── RESUME ──
       'resume.label': 'RESUME',
+      'resume.heading': 'Background & Expertise',
       'resume.name': 'Mohammad Yasrul',
       'resume.subtitle': 'Informatics Student &middot; Product Builder &middot; Indonesia',
       'resume.cv': 'Download CV',
@@ -328,6 +329,7 @@
 
       // ── RESUME ──
       'resume.label': 'RESUME',
+      'resume.heading': 'Latar Belakang & Keahlian',
       'resume.name': 'Mohammad Yasrul',
       'resume.subtitle': 'Mahasiswa Informatika &middot; Product Builder &middot; Indonesia',
       'resume.cv': 'Unduh CV',

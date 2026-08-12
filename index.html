@@ -182,48 +182,48 @@
         </section>
 
         <!-- SELECTED WORK -->
-        <section id="work" class="max-w-[1280px] mx-auto px-4 sm:px-8 pt-10 pb-section" aria-labelledby="work-heading">
-            <div class="flex items-end justify-between mb-12">
+        <section id="work" class="max-w-[1280px] mx-auto px-4 sm:px-8 pt-12 pb-section" aria-labelledby="work-heading">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-y-6 mb-12">
                 <div>
-                    <div class="section-label text-text-muted mb-3" data-i18n="work.label">SELECTED WORK</div>
+                    <div class="section-label text-text-muted mb-3 font-mono text-xs tracking-widest" data-i18n="work.label">SELECTED WORK</div>
                     <h2 id="work-heading" class="heading text-h2 text-text-primary" data-i18n="work.heading">Things I&rsquo;ve shipped</h2>
                 </div>
-                <div class="hidden md:block">
-                    <div class="flex items-center gap-x-1 text-sm" role="tablist" data-i18n-attr="aria-label" data-i18n="work.filter.aria">
-                        <button class="filter-tab px-3 py-1.5 rounded-lg bg-surface text-text-primary text-xs font-medium" role="tab" aria-selected="true" data-filter="all" data-i18n="work.filter.all">All</button>
-                        <button class="filter-tab px-3 py-1.5 rounded-lg text-text-muted hover:text-text-primary text-xs font-medium" role="tab" aria-selected="false" data-filter="live" data-i18n="work.filter.live">Live</button>
-                        <button class="filter-tab px-3 py-1.5 rounded-lg text-text-muted hover:text-text-primary text-xs font-medium" role="tab" aria-selected="false" data-filter="client" data-i18n="work.filter.client">Client</button>
-                        <button class="filter-tab px-3 py-1.5 rounded-lg text-text-muted hover:text-text-primary text-xs font-medium" role="tab" aria-selected="false" data-filter="casestudy" data-i18n="work.filter.casestudy">Case Study</button>
+                <div>
+                    <div class="flex items-center gap-x-1.5 text-sm overflow-x-auto max-w-full pb-2 md:pb-0 scrollbar-none" role="tablist" data-i18n-attr="aria-label" data-i18n="work.filter.aria">
+                        <button class="filter-tab px-4 py-2 rounded-xl bg-white/10 text-text-primary text-xs font-mono font-medium transition-all" role="tab" aria-selected="true" data-filter="all" data-i18n="work.filter.all">All</button>
+                        <button class="filter-tab px-4 py-2 rounded-xl text-text-muted hover:text-text-primary text-xs font-mono font-medium transition-all" role="tab" aria-selected="false" data-filter="live" data-i18n="work.filter.live">Live</button>
+                        <button class="filter-tab px-4 py-2 rounded-xl text-text-muted hover:text-text-primary text-xs font-mono font-medium transition-all" role="tab" aria-selected="false" data-filter="client" data-i18n="work.filter.client">Client</button>
+                        <button class="filter-tab px-4 py-2 rounded-xl text-text-muted hover:text-text-primary text-xs font-mono font-medium transition-all" role="tab" aria-selected="false" data-filter="casestudy" data-i18n="work.filter.casestudy">Case Study</button>
                     </div>
                 </div>
             </div>
 
-            <div class="space-y-6" id="work-list">
+            <div class="space-y-10 md:space-y-12" id="work-list">
 
                 <!-- TIER 1: FLAGSHIP HERO BENTO (Satukos) -->
-                <article class="work-item reveal group block bg-gradient-to-b from-surface to-canvas border border-accent-emerald/20 hover:border-accent-emerald/50 rounded-card p-6 sm:p-10 transition-all duration-300 shadow-lg hover:shadow-2xl hover:shadow-accent-emerald/5" data-category="live">
+                <article class="work-item reveal group block bg-gradient-to-b from-surface via-surface/90 to-canvas border border-accent-emerald/30 hover:border-accent-emerald/60 rounded-[2rem] p-8 sm:p-12 md:p-14 transition-all duration-300 shadow-xl hover:shadow-2xl hover:shadow-accent-emerald/10" data-category="live">
                     <a href="projects/satukos.html" class="block">
-                        <div class="grid md:grid-cols-12 gap-x-8 gap-y-8 items-center">
-                            <div class="md:col-span-7">
-                                <div class="flex items-center gap-x-3 mb-4">
-                                    <h3 class="heading text-h2 text-text-primary group-hover:text-accent-emerald transition-colors" data-i18n="work.satukos.title">Satukos</h3>
-                                    <span class="px-3 py-1 text-[11px] font-mono font-semibold tracking-wider bg-accent-emerald/10 border border-accent-emerald/30 text-accent-emerald rounded-full flex items-center gap-1.5" data-i18n="work.satukos.badge">
+                        <div class="grid md:grid-cols-12 gap-x-10 gap-y-10 items-center">
+                            <div class="md:col-span-7 space-y-6">
+                                <div class="flex items-center gap-x-3">
+                                    <h3 class="heading text-h2 sm:text-4xl text-text-primary group-hover:text-accent-emerald transition-colors" data-i18n="work.satukos.title">Satukos</h3>
+                                    <span class="px-3.5 py-1 text-[11px] font-mono font-semibold tracking-wider bg-accent-emerald/10 border border-accent-emerald/30 text-accent-emerald rounded-full flex items-center gap-1.5" data-i18n="work.satukos.badge">
                                         <span class="w-1.5 h-1.5 rounded-full bg-accent-emerald animate-pulse"></span> LIVE SAAS
                                     </span>
                                 </div>
-                                <p class="text-text-muted text-base sm:text-lg pr-4 body-text leading-relaxed" data-i18n="work.satukos.desc">A web-based SaaS platform to manage boarding house operations. Features automated WhatsApp billing, instant QRIS payments, QR door check-in, and real-time financial reporting.</p>
+                                <p class="text-text-muted text-base sm:text-xl body-text leading-relaxed max-w-xl" data-i18n="work.satukos.desc">A web-based SaaS platform to manage boarding house operations. Features automated WhatsApp billing, instant QRIS payments, QR door check-in, and real-time financial reporting.</p>
                                 
-                                <div class="mt-6 flex flex-wrap items-center gap-2 text-xs font-mono">
-                                    <span class="px-3 py-1.5 bg-white/5 border border-white/10 rounded-xl text-text-body flex items-center gap-1.5">
-                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                                <div class="pt-2 flex flex-wrap items-center gap-2.5 text-xs font-mono">
+                                    <span class="px-3.5 py-2 bg-white/5 border border-white/10 rounded-xl text-text-body flex items-center gap-2">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
                                         <span data-i18n="work.satukos.tag3">QRIS &amp; WhatsApp</span>
                                     </span>
-                                    <span class="px-3 py-1.5 bg-white/5 border border-white/10 rounded-xl text-text-muted" data-i18n="work.satukos.tag1">SaaS Platform</span>
-                                    <span class="px-3 py-1.5 bg-white/5 border border-white/10 rounded-xl text-text-subtle" data-i18n="work.satukos.tag2">Tailwind CSS</span>
+                                    <span class="px-3.5 py-2 bg-white/5 border border-white/10 rounded-xl text-text-muted" data-i18n="work.satukos.tag1">SaaS Platform</span>
+                                    <span class="px-3.5 py-2 bg-white/5 border border-white/10 rounded-xl text-text-subtle" data-i18n="work.satukos.tag2">Tailwind CSS</span>
                                 </div>
                             </div>
                             <div class="md:col-span-5">
-                                <div class="overflow-hidden rounded-2xl border border-white/10 bg-canvas shadow-xl group-hover:border-accent-emerald/40 transition-all">
+                                <div class="overflow-hidden rounded-2xl border border-white/10 bg-canvas shadow-2xl group-hover:border-accent-emerald/40 transition-all">
                                     <img src="assets/satukos-screenshot.png" data-i18n-attr="alt" data-i18n="work.satukos.img" alt="Satukos boarding house management dashboard" class="project-image w-full object-cover transform group-hover:scale-105 transition-transform duration-500" width="600" height="400" loading="lazy" decoding="async">
                                 </div>
                             </div>
@@ -232,49 +232,49 @@
                 </article>
 
                 <!-- TIER 2: ASYMMETRIC BENTO GRID (Texty & Game_trust) -->
-                <div class="grid md:grid-cols-2 gap-6">
+                <div class="work-grid-container grid md:grid-cols-2 gap-8 md:gap-10">
 
                     <!-- Texty -->
-                    <article class="work-item reveal group block bg-surface border border-border-subtle hover:border-white/30 rounded-card p-6 sm:p-8 transition-all duration-300 hover:-translate-y-1 shadow-md" data-category="live">
-                        <a href="projects/texty.html" class="block h-full flex flex-col justify-between">
-                            <div>
-                                <div class="flex items-center justify-between gap-x-3 mb-4">
-                                    <h3 class="heading text-h3 text-text-primary group-hover:text-accent-emerald transition-colors" data-i18n="work.texty.title">Texty</h3>
-                                    <span class="px-2.5 py-0.5 text-[10px] font-mono font-semibold tracking-wider bg-accent-emerald/10 text-accent-emerald rounded-full border border-accent-emerald/20" data-i18n="work.texty.badge">LIVE EXTENSION</span>
+                    <article class="work-item reveal group block bg-surface border border-border-subtle hover:border-white/30 rounded-[1.75rem] p-8 sm:p-10 transition-all duration-300 hover:-translate-y-1.5 shadow-lg flex flex-col justify-between" data-category="live">
+                        <a href="projects/texty.html" class="block h-full flex flex-col justify-between space-y-8">
+                            <div class="space-y-4">
+                                <div class="flex items-center justify-between gap-x-3">
+                                    <h3 class="heading text-2xl sm:text-3xl text-text-primary group-hover:text-accent-emerald transition-colors" data-i18n="work.texty.title">Texty</h3>
+                                    <span class="px-3 py-1 text-[10px] font-mono font-semibold tracking-wider bg-accent-emerald/10 text-accent-emerald rounded-full border border-accent-emerald/20" data-i18n="work.texty.badge">LIVE EXTENSION</span>
                                 </div>
-                                <p class="text-text-muted text-sm body-text leading-relaxed mb-6" data-i18n="work.texty.desc">A pragmatic text expander Chrome extension for freelancers, support teams, and power users. Published on the Chrome Web Store with a full marketing site and license system.</p>
+                                <p class="text-text-muted text-sm sm:text-base body-text leading-relaxed" data-i18n="work.texty.desc">A pragmatic text expander Chrome extension for freelancers, support teams, and power users. Published on the Chrome Web Store with a full marketing site and license system.</p>
                             </div>
                             
-                            <div>
-                                <div class="overflow-hidden rounded-xl border border-white/10 mb-6 bg-canvas">
+                            <div class="space-y-6">
+                                <div class="overflow-hidden rounded-2xl border border-white/10 bg-canvas">
                                     <img src="assets/1.png" data-i18n-attr="alt" data-i18n="work.texty.img" alt="Texty Chrome Extension interface" class="project-image w-full object-cover transform group-hover:scale-105 transition-transform duration-500" width="600" height="350" loading="lazy" decoding="async">
                                 </div>
                                 <div class="flex flex-wrap items-center gap-2 text-xs font-mono">
-                                    <span class="px-2.5 py-1 bg-white/5 rounded-lg text-text-muted" data-i18n="work.texty.tag1">Chrome Extension</span>
-                                    <span class="px-2.5 py-1 bg-white/5 rounded-lg text-text-muted" data-i18n="work.texty.tag2">Next.js + Supabase</span>
+                                    <span class="px-3 py-1.5 bg-white/5 border border-white/5 rounded-xl text-text-muted" data-i18n="work.texty.tag1">Chrome Extension</span>
+                                    <span class="px-3 py-1.5 bg-white/5 border border-white/5 rounded-xl text-text-muted" data-i18n="work.texty.tag2">Next.js + Supabase</span>
                                 </div>
                             </div>
                         </a>
                     </article>
 
                     <!-- Game_trust -->
-                    <article class="work-item reveal group block bg-surface border border-border-subtle hover:border-white/30 rounded-card p-6 sm:p-8 transition-all duration-300 hover:-translate-y-1 shadow-md" data-category="client">
-                        <a href="projects/game-trust.html" class="block h-full flex flex-col justify-between">
-                            <div>
-                                <div class="flex items-center justify-between gap-x-3 mb-4">
-                                    <h3 class="heading text-h3 text-text-primary group-hover:text-accent-amber transition-colors" data-i18n="work.gt.title">Game_trust</h3>
-                                    <span class="px-2.5 py-0.5 text-[10px] font-mono font-semibold tracking-wider bg-accent-amber/10 text-accent-amber rounded-full border border-accent-amber/20" data-i18n="work.gt.badge">CLIENT DELIVERED</span>
+                    <article class="work-item reveal group block bg-surface border border-border-subtle hover:border-white/30 rounded-[1.75rem] p-8 sm:p-10 transition-all duration-300 hover:-translate-y-1.5 shadow-lg flex flex-col justify-between" data-category="client">
+                        <a href="projects/game-trust.html" class="block h-full flex flex-col justify-between space-y-8">
+                            <div class="space-y-4">
+                                <div class="flex items-center justify-between gap-x-3">
+                                    <h3 class="heading text-2xl sm:text-3xl text-text-primary group-hover:text-accent-amber transition-colors" data-i18n="work.gt.title">Game_trust</h3>
+                                    <span class="px-3 py-1 text-[10px] font-mono font-semibold tracking-wider bg-accent-amber/10 text-accent-amber rounded-full border border-accent-amber/20" data-i18n="work.gt.badge">CLIENT DELIVERED</span>
                                 </div>
-                                <p class="text-text-muted text-sm body-text leading-relaxed mb-6" data-i18n="work.gt.desc">A complete secondary marketplace platform for in-game assets. Features offer system, order management, admin tools, financial reporting, and multi-role access. Delivered to a paying client.</p>
+                                <p class="text-text-muted text-sm sm:text-base body-text leading-relaxed" data-i18n="work.gt.desc">A complete secondary marketplace platform for in-game assets. Features offer system, order management, admin tools, financial reporting, and multi-role access. Delivered to a paying client.</p>
                             </div>
                             
-                            <div>
-                                <div class="overflow-hidden rounded-xl border border-white/10 mb-6 bg-canvas">
+                            <div class="space-y-6">
+                                <div class="overflow-hidden rounded-2xl border border-white/10 bg-canvas">
                                     <img src="assets/gametrust-screenshot.png" data-i18n-attr="alt" data-i18n="work.gt.img" alt="Game_trust admin dashboard" class="project-image w-full object-cover transform group-hover:scale-105 transition-transform duration-500" width="600" height="350" loading="lazy" decoding="async">
                                 </div>
                                 <div class="flex flex-wrap items-center gap-2 text-xs font-mono">
-                                    <span class="px-2.5 py-1 bg-white/5 rounded-lg text-text-muted" data-i18n="work.gt.tag1">Next.js 15</span>
-                                    <span class="px-2.5 py-1 bg-white/5 rounded-lg text-text-muted" data-i18n="work.gt.tag2">Supabase</span>
+                                    <span class="px-3 py-1.5 bg-white/5 border border-white/5 rounded-xl text-text-muted" data-i18n="work.gt.tag1">Next.js 15</span>
+                                    <span class="px-3 py-1.5 bg-white/5 border border-white/5 rounded-xl text-text-muted" data-i18n="work.gt.tag2">Supabase</span>
                                 </div>
                             </div>
                         </a>
@@ -283,49 +283,49 @@
                 </div>
 
                 <!-- TIER 3: CASE STUDIES BENTO GRID (MediSir & Jokskuy) -->
-                <div class="grid md:grid-cols-2 gap-6">
+                <div class="work-grid-container grid md:grid-cols-2 gap-8 md:gap-10">
 
                     <!-- MediSir POS -->
-                    <article class="work-item reveal group block bg-surface/60 border border-border-subtle hover:border-white/30 rounded-card p-6 sm:p-8 transition-all duration-300 hover:-translate-y-1" data-category="casestudy">
-                        <a href="projects/medisir.html" class="block h-full flex flex-col justify-between">
-                            <div>
-                                <div class="flex items-center justify-between gap-x-3 mb-4">
-                                    <h3 class="heading text-h3 text-text-primary group-hover:text-accent-rose transition-colors" data-i18n="work.medisir.title">MediSir POS</h3>
-                                    <span class="px-2.5 py-0.5 text-[10px] font-mono font-semibold tracking-wider bg-white/10 text-text-muted rounded-full" data-i18n="work.medisir.badge">CASE STUDY</span>
+                    <article class="work-item reveal group block bg-surface/70 border border-border-subtle hover:border-white/30 rounded-[1.75rem] p-8 sm:p-10 transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between" data-category="casestudy">
+                        <a href="projects/medisir.html" class="block h-full flex flex-col justify-between space-y-8">
+                            <div class="space-y-4">
+                                <div class="flex items-center justify-between gap-x-3">
+                                    <h3 class="heading text-2xl sm:text-3xl text-text-primary group-hover:text-accent-rose transition-colors" data-i18n="work.medisir.title">MediSir POS</h3>
+                                    <span class="px-3 py-1 text-[10px] font-mono font-semibold tracking-wider bg-white/10 text-text-muted rounded-full" data-i18n="work.medisir.badge">CASE STUDY</span>
                                 </div>
-                                <p class="text-text-muted text-sm body-text leading-relaxed mb-6" data-i18n="work.medisir.desc">One of the most technically complete systems I&rsquo;ve built — a full pharmacy management SaaS with POS, multi-cashier, realtime inventory, prescriptions, and WhatsApp receipts. Advanced MVP paused due to healthcare regulations.</p>
+                                <p class="text-text-muted text-sm sm:text-base body-text leading-relaxed" data-i18n="work.medisir.desc">One of the most technically complete systems I&rsquo;ve built — a full pharmacy management SaaS with POS, multi-cashier, realtime inventory, prescriptions, and WhatsApp receipts. Advanced MVP paused due to healthcare regulations.</p>
                             </div>
                             
-                            <div>
-                                <div class="overflow-hidden rounded-xl border border-white/10 mb-6 bg-canvas">
+                            <div class="space-y-6">
+                                <div class="overflow-hidden rounded-2xl border border-white/10 bg-canvas">
                                     <img src="assets/medisir-screenshot.png" data-i18n-attr="alt" data-i18n="work.medisir.img" alt="MediSir POS pharmacy management dashboard" class="project-image w-full object-cover transform group-hover:scale-105 transition-transform duration-500" width="600" height="350" loading="lazy" decoding="async">
                                 </div>
                                 <div class="flex flex-wrap items-center gap-2 text-xs font-mono">
-                                    <span class="px-2.5 py-1 bg-white/5 rounded-lg text-text-muted" data-i18n="work.medisir.tag1">React + TS</span>
-                                    <span class="px-2.5 py-1 bg-white/5 rounded-lg text-text-muted" data-i18n="work.medisir.tag2">Supabase Realtime</span>
+                                    <span class="px-3 py-1.5 bg-white/5 border border-white/5 rounded-xl text-text-muted" data-i18n="work.medisir.tag1">React + TS</span>
+                                    <span class="px-3 py-1.5 bg-white/5 border border-white/5 rounded-xl text-text-muted" data-i18n="work.medisir.tag2">Supabase Realtime</span>
                                 </div>
                             </div>
                         </a>
                     </article>
 
                     <!-- Jokskuy -->
-                    <article class="work-item reveal group block bg-surface/60 border border-border-subtle hover:border-white/30 rounded-card p-6 sm:p-8 transition-all duration-300 hover:-translate-y-1" data-category="client">
-                        <a href="projects/jokskuy.html" class="block h-full flex flex-col justify-between">
-                            <div>
-                                <div class="flex items-center justify-between gap-x-3 mb-4">
-                                    <h3 class="heading text-h3 text-text-primary group-hover:text-accent-blue transition-colors" data-i18n="work.jokskuy.title">Jokskuy</h3>
-                                    <span class="px-2.5 py-0.5 text-[10px] font-mono font-semibold tracking-wider bg-accent-blue/10 text-accent-blue rounded-full border border-accent-blue/20" data-i18n="work.jokskuy.badge">FULL SYSTEM</span>
+                    <article class="work-item reveal group block bg-surface/70 border border-border-subtle hover:border-white/30 rounded-[1.75rem] p-8 sm:p-10 transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between" data-category="client">
+                        <a href="projects/jokskuy.html" class="block h-full flex flex-col justify-between space-y-8">
+                            <div class="space-y-4">
+                                <div class="flex items-center justify-between gap-x-3">
+                                    <h3 class="heading text-2xl sm:text-3xl text-text-primary group-hover:text-accent-blue transition-colors" data-i18n="work.jokskuy.title">Jokskuy</h3>
+                                    <span class="px-3 py-1 text-[10px] font-mono font-semibold tracking-wider bg-accent-blue/10 text-accent-blue rounded-full border border-accent-blue/20" data-i18n="work.jokskuy.badge">FULL SYSTEM</span>
                                 </div>
-                                <p class="text-text-muted text-sm body-text leading-relaxed mb-6" data-i18n="work.jokskuy.desc">Complete client and order management platform for an educational service operation. Real-time chat, payment proof verification, admin workflows, custom requests, and delivery tracking.</p>
+                                <p class="text-text-muted text-sm sm:text-base body-text leading-relaxed" data-i18n="work.jokskuy.desc">Complete client and order management platform for an educational service operation. Real-time chat, payment proof verification, admin workflows, custom requests, and delivery tracking.</p>
                             </div>
                             
-                            <div>
-                                <div class="overflow-hidden rounded-xl border border-white/10 mb-6 bg-canvas">
+                            <div class="space-y-6">
+                                <div class="overflow-hidden rounded-2xl border border-white/10 bg-canvas">
                                     <img src="assets/jokskuy-screenshot.png" data-i18n-attr="alt" data-i18n="work.jokskuy.img" alt="Jokskuy order management platform" class="project-image w-full object-cover transform group-hover:scale-105 transition-transform duration-500" width="600" height="350" loading="lazy" decoding="async">
                                 </div>
                                 <div class="flex flex-wrap items-center gap-2 text-xs font-mono">
-                                    <span class="px-2.5 py-1 bg-white/5 rounded-lg text-text-muted" data-i18n="work.jokskuy.tag1">React 19</span>
-                                    <span class="px-2.5 py-1 bg-white/5 rounded-lg text-text-muted" data-i18n="work.jokskuy.tag2">Supabase</span>
+                                    <span class="px-3 py-1.5 bg-white/5 border border-white/5 rounded-xl text-text-muted" data-i18n="work.jokskuy.tag1">React 19</span>
+                                    <span class="px-3 py-1.5 bg-white/5 border border-white/5 rounded-xl text-text-muted" data-i18n="work.jokskuy.tag2">Supabase</span>
                                 </div>
                             </div>
                         </a>
@@ -561,12 +561,23 @@
         document.querySelectorAll('.filter-tab').forEach(tab => {
             tab.addEventListener('click', () => {
                 const filter = tab.dataset.filter;
-                document.querySelectorAll('.filter-tab').forEach(t => { t.setAttribute('aria-selected', 'false'); t.classList.remove('bg-surface','text-text-primary'); t.classList.add('text-text-muted'); });
+                document.querySelectorAll('.filter-tab').forEach(t => { 
+                    t.setAttribute('aria-selected', 'false'); 
+                    t.classList.remove('bg-white/10', 'text-text-primary'); 
+                    t.classList.add('text-text-muted'); 
+                });
                 tab.setAttribute('aria-selected', 'true');
-                tab.classList.add('bg-surface','text-text-primary');
+                tab.classList.add('bg-white/10', 'text-text-primary');
                 tab.classList.remove('text-text-muted');
-                document.querySelectorAll('#work-list > article').forEach(item => {
-                    item.style.display = filter === 'all' ? '' : (item.dataset.category === filter ? '' : 'none');
+
+                document.querySelectorAll('.work-item').forEach(item => {
+                    const matches = filter === 'all' || item.dataset.category === filter;
+                    item.style.display = matches ? '' : 'none';
+                });
+
+                document.querySelectorAll('.work-grid-container').forEach(grid => {
+                    const hasVisibleChild = Array.from(grid.querySelectorAll('.work-item')).some(item => item.style.display !== 'none');
+                    grid.style.display = hasVisibleChild ? '' : 'none';
                 });
             });
         });
